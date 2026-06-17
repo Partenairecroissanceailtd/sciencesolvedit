@@ -1,0 +1,37 @@
+{
+  "_note": "Fill in your API credentials here. The pipeline uses these to auth and pull offers.",
+
+  "awin": {
+    "api_key": "",
+    "api_secret": "",
+    "publisher_id": ""
+  },
+  "partnerstack": {
+    "api_key": "",
+    "api_secret": ""
+  },
+  "impact": {
+    "account_sid": "",
+    "auth_token": "",
+    "program_id": ""
+  },
+  "filters": {
+    "min_commission": 5,
+    "min_cookie_days": 7,
+    "target_geo": ["US", "CA", "UK", "AU"],
+    "target_niches": [
+      "red-light-therapy",
+      "cold-plunge",
+      "pemf",
+      "wearables",
+      "sauna",
+      "biohacking"
+    ],
+    "exclude_kyc": true
+  },
+  "publishing": {
+    "output_dir": "../content/reviews",
+    "auto_publish": false,
+    "disclosure_text": "We earn a commission if you purchase through our links, at no extra cost to you."
+  }
+}

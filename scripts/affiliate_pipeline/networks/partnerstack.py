@@ -8,7 +8,7 @@ import logging, base64
 from typing import Optional
 import requests
 
-from .config import AffiliateOffer, NetworkCredentials, logger
+from ..config import AffiliateOffer, NetworkCredentials, logger
 
 
 class PartnerStackAdapter:
