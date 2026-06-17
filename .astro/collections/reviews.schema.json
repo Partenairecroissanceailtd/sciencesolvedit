@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "pros": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affiliateUrl": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "publishedDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "featured": {
+      "default": false,
+      "type": "boolean"
+    },
+    "image": {
+      "type": "string"
+    },
+    "specs": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "category",
+    "price",
+    "rating"
+  ]
+}

@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const comparisons = await getCollection('comparisons');
+---
+
+<BaseLayout
+  title="Product Comparisons — Science Solved It"
+  description="Head-to-head product comparisons. We pit the top biohacking hardware against each other so you can choose the winner."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Comparisons', url: '/comparisons/' }
+  ]}
+>
+  <div class="container" style="padding:2rem 0">
+    <h1 style="margin-bottom:0.5rem">Comparisons</h1>
+    <p style="font-size:1.1rem; margin-bottom:2rem; color:var(--text-muted)">
+      Side-by-side showdowns. Every comparison includes objective test data.
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:1.5rem">
+      {comparisons.reverse().map(c => {
+        const slug = c.id.replace('comparisons/', '');
+        return (
+        <a href={`/comparisons/${slug}/`} style="text-decoration:none; color:inherit">
+          <div class="card">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem">
+              <span class="tag">{c.data.category.replace(/-/g, ' ')}</span>
+              {c.data.winner && <span class="tag-green">Winner: {c.data.winner}</span>}
+            </div>
+            <h2 style="font-size:1.15rem; margin:0 0 0.5rem">{c.data.title}</h2>
+            <p style="font-size:0.9rem; color:var(--text-muted)">{c.data.description}</p>
+            <div style="margin-top:0.75rem; color:var(--text-muted); font-size:0.85rem">
+              {c.data.products?.length || 0} products compared
+            </div>
+          </div>
+        </a>
+      );})}
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const guides = await getCollection('guides');
+---
+
+<BaseLayout
+  title="Buyer's Guides — Science Solved It"
+  description="Research-backed buying guides for biohacking hardware. Side-by-side product comparisons to help you choose the best gear."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Guides', url: '/guides/' }
+  ]}
+>
+  <div class="container" style="padding:2rem 0">
+    <h1 style="margin-bottom:0.5rem">Buyer's Guides</h1>
+    <p style="font-size:1.1rem; margin-bottom:2rem; color:var(--text-muted)">
+      Not sure what to buy? Start here. Each guide compares the top products in a category.
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:1.5rem">
+      {guides.reverse().map(g => {
+        const slug = g.id.replace('guides/', '');
+        return (
+        <a href={`/guides/${slug}/`} style="text-decoration:none; color:inherit">
+          <div class="card">
+            <div style="margin-bottom:0.75rem">
+              <span class="tag">{g.data.category.replace(/-/g, ' ')}</span>
+            </div>
+            <h2 style="font-size:1.15rem; margin:0 0 0.5rem">{g.data.title}</h2>
+            <p style="font-size:0.9rem; color:var(--text-muted)">{g.data.description}</p>
+            <div style="margin-top:0.75rem; color:var(--text-muted); font-size:0.85rem">
+              {g.data.products} products compared
+            </div>
+          </div>
+        </a>
+      );})}
+    </div>
+    </div>
+  </div>
+</BaseLayout>

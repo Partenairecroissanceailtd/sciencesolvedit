@@ -1,0 +1,250 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  jsonLd?: Record<string, any>;
+  breadcrumbs?: { name: string; url: string }[];
+}
+
+const { 
+  title, 
+  description, 
+  canonical, 
+  image, 
+  type = 'website', 
+  publishedTime, 
+  jsonLd,
+  breadcrumbs 
+} = Astro.props;
+const siteUrl = 'https://www.sciencesolvedit.store';
+const defaultImage = '/images/og-default.png';
+const siteName = 'Science Solved It';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | {siteName}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical || `${siteUrl}${Astro.url.pathname}`} />
+  
+  <!-- Google Analytics (placeholder - set PUBLIC_GA_ID env var) -->
+  {import.meta.env.PUBLIC_GA_ID && (
+    <>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{import.meta.env.PUBLIC_GA_ID}');
+      </script>
+    </>
+  )}
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image || `${siteUrl}${defaultImage}`} />
+  <meta property="og:url" content={canonical || `${siteUrl}${Astro.url.pathname}`} />
+  <meta property="og:type" content={type} />
+  <meta property="og:site_name" content={siteName} />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image || `${siteUrl}${defaultImage}`} />
+
+  <!-- JSON-LD -->
+  {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+  <!-- BreadcrumbList JSON-LD -->
+  {breadcrumbs && breadcrumbs.length > 0 && (() => {
+    const bcData = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((crumb, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": crumb.name,
+        "item": crumb.url.startsWith('http') ? crumb.url : `${siteUrl}${crumb.url}`
+      }))
+    };
+    return <script type="application/ld+json" set:html={JSON.stringify(bcData)} />;
+  })()}
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+  <link rel="alternate" type="application/rss+xml" title={`${siteName} Blog`} href="/rss.xml" />
+
+  <style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    
+    :root {
+      --bg: #0a0f1a;
+      --bg-card: #1a2332;
+      --bg-card-hover: #1e2a3e;
+      --border: #2a3a4e;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --green: #22c55e;
+      --amber: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Inter', system-ui, sans-serif; 
+      background: var(--bg); 
+      color: var(--text); 
+      line-height: 1.6; 
+      min-height: 100vh;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; color: var(--accent-hover); }
+    img { max-width: 100%; height: auto; border-radius: 0.5rem; }
+    
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+    .container-narrow { max-width: 750px; margin: 0 auto; padding: 0 1.5rem; }
+    
+    .btn { 
+      display: inline-flex; align-items: center; gap: 0.5rem; 
+      padding: 0.75rem 1.5rem; border-radius: 0.5rem; 
+      font-weight: 600; font-size: 0.95rem; 
+      transition: all 0.2s; cursor: pointer; border: none; 
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-hover); text-decoration: none; }
+    .btn-outline { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
+    .btn-outline:hover { background: var(--accent); color: #fff; text-decoration: none; }
+    .btn-green { background: var(--green); color: #000; }
+    .btn-green:hover { opacity: 0.9; text-decoration: none; }
+
+    .card { 
+      background: var(--bg-card); 
+      border: 1px solid var(--border); 
+      border-radius: 0.75rem; 
+      padding: 1.5rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .card:hover { border-color: var(--accent); background: var(--bg-card-hover); }
+    
+    h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; }
+    h1 { font-size: 2.5rem; } 
+    h2 { font-size: 1.75rem; margin-top: 2rem; margin-bottom: 0.75rem; } 
+    h3 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    p { margin-bottom: 1rem; color: var(--text-muted); } 
+    ul, ol { margin-bottom: 1rem; padding-left: 1.5rem; color: var(--text-muted); } 
+    li { margin-bottom: 0.5rem; }
+
+    .tag { 
+      display: inline-block; padding: 0.2rem 0.6rem; 
+      border-radius: 9999px; 
+      background: var(--accent); color: #fff; 
+      font-size: 0.75rem; font-weight: 600; 
+    }
+    .tag-green { background: var(--green); color: #000; }
+    .tag-amber { background: var(--amber); color: #000; }
+    
+    header { 
+      border-bottom: 1px solid var(--border); 
+      padding: 1rem 0; 
+      position: sticky; top: 0; 
+      background: var(--bg); 
+      z-index: 100; 
+    }
+    header .container { display: flex; align-items: center; justify-content: space-between; }
+    header nav a { color: var(--text-muted); font-size: 0.9rem; margin-left: 1.5rem; }
+    header nav a:hover { color: var(--text); text-decoration: none; }
+    
+    footer { 
+      border-top: 1px solid var(--border); 
+      padding: 2rem 0; margin-top: 4rem; 
+      text-align: center; color: #64748b; font-size: 0.85rem; 
+    }
+
+    .prose { max-width: 750px; margin: 0 auto; padding: 2rem 0; }
+    .prose h2 { border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .prose table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .prose th, .prose td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+    .prose th { background: var(--bg-card); color: var(--text); font-weight: 600; }
+    .prose td { color: var(--text-muted); }
+    .prose code { background: var(--bg-card); padding: 0.1rem 0.3rem; border-radius: 0.25rem; font-size: 0.85rem; }
+    .prose pre { background: var(--bg-card); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin: 1rem 0; }
+    .prose pre code { background: none; padding: 0; }
+    .prose blockquote { 
+      border-left: 3px solid var(--accent); 
+      padding-left: 1rem; 
+      margin: 1.5rem 0; 
+      color: var(--text-muted); 
+      font-style: italic; 
+    }
+    .prose img { margin: 1.5rem 0; }
+
+    .affiliate-disclosure {
+      font-size: 0.8rem;
+      color: #64748b;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .price-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      background: var(--green);
+      color: #000;
+    }
+
+    @media (max-width: 768px) { 
+      h1 { font-size: 1.75rem; } 
+      header nav a { margin-left: 0.75rem; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" style="font-weight:700;font-size:1.1rem;color:var(--text);text-decoration:none">
+        Science Solved It
+      </a>
+      <nav>
+        <a href="/reviews/">Reviews</a>
+        <a href="/guides/">Buyer's Guides</a>
+        <a href="/comparisons/">Comparisons</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main><slot /></main>
+  <footer>
+    <div class="container">
+      <p>&copy; {new Date().getFullYear()} {siteName}. All rights reserved.</p>
+      <p style="margin-top:0.5rem; font-size:0.8rem">
+        <a href="/privacy/">Privacy Policy</a> &middot;
+        <a href="/affiliate-disclosure/">Affiliate Disclosure</a> &middot;
+        <a href="/sitemap-index.xml">Sitemap</a>
+      </p>
+      <p class="affiliate-disclosure" style="margin-top:1rem; max-width:600px; margin-left:auto; margin-right:auto">
+        We earn a commission from qualifying purchases through affiliate links. 
+        This does not affect our editorial independence or product ratings.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

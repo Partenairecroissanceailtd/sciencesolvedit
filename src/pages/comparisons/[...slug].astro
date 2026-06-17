@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, getEntry, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('comparisons');
+  return entries.map(entry => ({
+    params: { slug: entry.id.replace('comparisons/', '') },
+    props: { id: entry.id }
+  }));
+}
+
+const { id } = Astro.props;
+const entry = await getEntry('comparisons', id);
+const { Content } = await render(entry);
+const slug = id.replace('comparisons/', '');
+---
+
+<BaseLayout
+  title={`${entry.data.title} — Science Solved It`}
+  description={entry.data.description}
+  type="article"
+  publishedTime={entry.data.publishedDate?.toISOString()}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Comparisons', url: '/comparisons/' },
+    { name: entry.data.title, url: `/comparisons/${slug}/` }
+  ]}
+>
+  <article class="container-narrow" style="padding:2rem 0">
+    <div style="margin-bottom:2rem">
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem">
+        <span class="tag">{entry.data.category.replace(/-/g, ' ')}</span>
+        {entry.data.winner && <span class="tag-green">Winner: {entry.data.winner}</span>}
+      </div>
+      <h1>{entry.data.title}</h1>
+      <p style="font-size:1.1rem; color:var(--text-muted); margin-top:0.75rem">{entry.data.description}</p>
+    </div>
+
+    <div class="affiliate-disclosure">
+      We earn a commission if you purchase through our links, at no extra cost to you.
+    </div>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border)">
+      <a href="/comparisons/" style="color:var(--text-muted)">← All Comparisons</a>
+    </div>
+  </article>
+</BaseLayout>

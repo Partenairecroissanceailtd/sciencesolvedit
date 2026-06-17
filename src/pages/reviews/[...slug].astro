@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, getEntry, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('reviews');
+  return entries.map(entry => ({
+    params: { slug: entry.id.replace('reviews/', '') },
+    props: { id: entry.id }
+  }));
+}
+
+const { id } = Astro.props;
+const entry = await getEntry('reviews', id);
+const { Content } = await render(entry);
+const slug = id.replace('reviews/', '');
+---
+
+<BaseLayout
+  title={`${entry.data.title} — Science Solved It`}
+  description={entry.data.description}
+  type="article"
+  publishedTime={entry.data.publishedDate?.toISOString()}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Reviews', url: '/reviews/' },
+    { name: entry.data.title, url: `/reviews/${slug}/` }
+  ]}
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": entry.data.title,
+    "description": entry.data.description,
+    "brand": { "@type": "Brand", "name": entry.data.brand || "Unknown" },
+    "offers": {
+      "@type": "Offer",
+      "price": entry.data.price,
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": entry.data.rating,
+      "bestRating": 5,
+      "worstRating": 1,
+      "reviewCount": 1
+    }
+  }}
+>
+  <article class="container-narrow" style="padding:2rem 0">
+    <div style="margin-bottom:2rem">
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem">
+        <span class="tag">{entry.data.category.replace(/-/g, ' ')}</span>
+        <span class="tag-green" style="font-size:1rem">★ {entry.data.rating}/5</span>
+        <span class="price-badge">${entry.data.price}</span>
+      </div>
+      <h1>{entry.data.title}</h1>
+      <p style="font-size:1.1rem; color:var(--text-muted); margin-top:0.75rem">
+        {entry.data.description}
+      </p>
+    </div>
+
+    {(entry.data.pros?.length > 0 || entry.data.cons?.length > 0) && (
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2rem">
+        {entry.data.pros?.length > 0 && (
+          <div class="card" style="border-color: var(--green)">
+            <h3 style="color:var(--green); margin:0 0 0.75rem">✅ Pros</h3>
+            <ul style="margin:0">
+              {entry.data.pros.map(p => <li style="color:var(--text); list-style:none; padding-left:0">{p}</li>)}
+            </ul>
+          </div>
+        )}
+        {entry.data.cons?.length > 0 && (
+          <div class="card" style="border-color: var(--red)">
+            <h3 style="color:var(--red); margin:0 0 0.75rem">❌ Cons</h3>
+            <ul style="margin:0">
+              {entry.data.cons.map(c => <li style="color:var(--text); list-style:none; padding-left:0">{c}</li>)}
+            </ul>
+          </div>
+        )}
+      </div>
+    )}
+
+    {entry.data.specs && (
+      <div class="card" style="margin-bottom:2rem">
+        <h3 style="margin-bottom:1rem">Specifications</h3>
+        <table style="width:100%">
+          <tbody>
+            {Object.entries(entry.data.specs).map(([key, val]) => (
+              <tr><td style="font-weight:600; padding:0.5rem 1rem 0.5rem 0; color:var(--text)">{key}</td><td style="padding:0.5rem 0; color:var(--text-muted)">{val}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+
+    <div class="affiliate-disclosure">
+      We earn a commission if you purchase through our links, at no extra cost to you.
+    </div>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {entry.data.affiliateUrl && (
+      <div style="text-align:center; margin:3rem 0">
+        <a href={entry.data.affiliateUrl} target="_blank" class="btn btn-green" style="font-size:1.1rem; padding:1rem 2rem">
+          → Check Current Price at {entry.data.brand || 'Store'}
+        </a>
+      </div>
+    )}
+
+    <div style="display:flex; justify-content:space-between; margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border)">
+      <a href="/reviews/" style="color:var(--text-muted)">← All Reviews</a>
+      <a href="/guides/" style="color:var(--text-muted)">Buyer's Guides →</a>
+    </div>
+  </article>
+</BaseLayout>

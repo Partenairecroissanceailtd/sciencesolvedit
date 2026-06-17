@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const reviews = await getCollection('reviews');
+const categories = [...new Set(reviews.map(r => r.data.category))];
+---
+
+<BaseLayout
+  title="Product Reviews — Science Solved It"
+  description="Independent, evidence-based reviews of biohacking hardware, wearables, and performance gear. Each product tested against objective benchmarks."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Reviews', url: '/reviews/' }
+  ]}
+>
+  <div class="container" style="padding:2rem 0">
+    <h1 style="margin-bottom:0.5rem">Product Reviews</h1>
+    <p style="font-size:1.1rem; margin-bottom:2rem; color:var(--text-muted)">
+      Every product tested against objective, scientific benchmarks. No fluff, no affiliate bias.
+    </p>
+
+    <!-- Category Filter -->
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem">
+      <a href="/reviews/" class="tag" style="background:var(--accent); font-size:0.85rem">All</a>
+      {categories.map(cat => (
+        <a href={`/category/${cat}/`} class="tag" style="background:var(--bg-card); color:var(--text); border:1px solid var(--border); font-size:0.85rem">
+          {cat.replace(/-/g, ' ')}
+        </a>
+      ))}
+    </div>
+
+    <!-- Review List -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:1.5rem">
+      {reviews.reverse().map(r => {
+        const slug = r.id.replace('reviews/', '');
+        return (
+        <a href={`/reviews/${slug}/`} style="text-decoration:none; color:inherit">
+          <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:start; margin-bottom:0.75rem">
+              <span class="tag">{r.data.category.replace(/-/g, ' ')}</span>
+              <span class="price-badge" style="font-size:0.9rem">${r.data.price}</span>
+            </div>
+            <h2 style="font-size:1.15rem; margin:0 0 0.5rem">{r.data.title}</h2>
+            <p style="font-size:0.9rem; color:var(--text-muted)">{r.data.description}</p>
+            <div style="margin-top:0.75rem; display:flex; gap:0.5rem; align-items:center">
+              <span style="color:var(--green); font-weight:600">★ {r.data.rating}/5</span>
+              <span style="color:var(--text-muted); font-size:0.85rem">
+                {r.data.pros?.length || 0} pros / {r.data.cons?.length || 0} cons
+              </span>
+            </div>
+          </div>
+        </a>
+      );})}
+    </div>
+    </div>
+  </div>
+</BaseLayout>

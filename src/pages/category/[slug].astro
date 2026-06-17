@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const reviews = await getCollection('reviews');
+  const guides = await getCollection('guides');
+  const comparisons = await getCollection('comparisons');
+  const categories = [...new Set([
+    ...reviews.map(r => r.data.category),
+    ...guides.map(g => g.data.category),
+    ...comparisons.map(c => c.data.category)
+  ])];
+  return categories.map(cat => ({ params: { slug: cat } }));
+}
+
+const { slug } = Astro.params;
+const reviews = (await getCollection('reviews')).filter(r => r.data.category === slug);
+const guides = (await getCollection('guides')).filter(g => g.data.category === slug);
+const comparisons = (await getCollection('comparisons')).filter(c => c.data.category === slug);
+const categoryName = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+---
+
+<BaseLayout
+  title={`${categoryName} — Science Solved It`}
+  description={`Research-backed ${categoryName.toLowerCase()} reviews, buyer's guides, and product comparisons. Evidence-based buying advice.`}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: categoryName, url: `/category/${slug}/` }
+  ]}
+>
+  <div class="container" style="padding:2rem 0">
+    <h1 style="margin-bottom:0.5rem">{categoryName}</h1>
+    <p style="font-size:1.1rem; margin-bottom:2rem; color:var(--text-muted)">
+      {reviews.length} reviews · {guides.length} guides · {comparisons.length} comparisons
+    </p>
+
+    {guides.length > 0 && (
+      <>
+        <h2 style="margin-bottom:1rem">Buyer's Guides</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem; margin-bottom:2rem">
+          {guides.map(g => {
+        const gslug = g.id.replace('guides/', '');
+        return (
+            <a href={`/guides/${gslug}/`} class="card" style="text-decoration:none; color:inherit">
+              <h3 style="font-size:1rem; margin-bottom:0.5rem">{g.data.title}</h3>
+              <p style="font-size:0.85rem">{g.data.description}</p>
+            </a>
+        );})}
+        </div>
+      </>
+    )}
+
+    {reviews.length > 0 && (
+      <>
+        <h2 style="margin-bottom:1rem">Reviews</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem; margin-bottom:2rem">
+          {reviews.map(r => {
+        const slug = r.id.replace('reviews/', '');
+        return (
+            <a href={`/reviews/${slug}/`} class="card" style="text-decoration:none; color:inherit">
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem">
+                <span style="color:var(--green); font-weight:600">★ {r.data.rating}</span>
+                <span style="color:var(--text-muted)">${r.data.price}</span>
+              </div>
+              <h3 style="font-size:1rem; margin-bottom:0.5rem">{r.data.title}</h3>
+              <p style="font-size:0.85rem">{r.data.description}</p>
+            </a>
+        );})}
+        </div>
+      </>
+    )}
+
+    {comparisons.length > 0 && (
+      <>
+        <h2 style="margin-bottom:1rem">Comparisons</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem">
+          {comparisons.map(c => {
+        const cslug = c.id.replace('comparisons/', '');
+        return (
+            <a href={`/comparisons/${cslug}/`} class="card" style="text-decoration:none; color:inherit">
+              <h3 style="font-size:1rem; margin-bottom:0.5rem">{c.data.title}</h3>
+              <p style="font-size:0.85rem">{c.data.description}</p>
+            </a>
+        );})}
+        </div>
+      </>
+    )}
+  </div>
+</BaseLayout>

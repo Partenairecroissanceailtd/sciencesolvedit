@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "winner": {
+      "type": "string"
+    },
+    "publishedDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "featured": {
+      "default": false,
+      "type": "boolean"
+    },
+    "image": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "category",
+    "products"
+  ]
+}

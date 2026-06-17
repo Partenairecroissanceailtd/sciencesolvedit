@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About — Science Solved It"
+  description="We're a team of engineers, biohackers, and data analysts who believe buying decisions should be based on evidence, not marketing."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'About', url: '/about/' }
+  ]}
+>
+  <div class="container-narrow" style="padding:3rem 0">
+    <h1>About Science Solved It</h1>
+    
+    <p style="font-size:1.1rem; margin:1.5rem 0">
+      We believe that buying biohacking hardware should be a rational decision — but the industry is flooded with marketing claims, pseudoscience, and affiliate-driven recommendations.
+    </p>
+
+    <h2>Our Mission</h2>
+    <p>
+      To become the most trusted source of evidence-based biohacking product reviews on the internet. Every product we review is tested against objective, reproducible benchmarks. We cite our sources. We disclose our conflicts. We update our reviews as new evidence emerges.
+    </p>
+
+    <h2>How We Test</h2>
+    <ul>
+      <li><strong>Wavelength accuracy</strong> — Spectrometer verification (±5nm tolerance)</li>
+      <li><strong>Irradiance mapping</strong> — Grid measurements at multiple distances</li>
+      <li><strong>Build quality</strong> — Thermal imaging, EMF meters, material inspection</li>
+      <li><strong>Literature review</strong> — PubMed search for human clinical trials</li>
+      <li><strong>Real-world use</strong> — Minimum 2 weeks of daily use per product</li>
+    </ul>
+
+    <h2>Our Independence</h2>
+    <p>
+      We use affiliate links to fund our testing and operations. This does not affect our ratings or editorial decisions. If a product is bad, we say so — regardless of commission.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Have a product you want us to test? Questions about our methodology? 
+      Email us at <a href="mailto:hello@sciencesolvedit.store">hello@sciencesolvedit.store</a>.
+    </p>
+  </div>
+</BaseLayout>
