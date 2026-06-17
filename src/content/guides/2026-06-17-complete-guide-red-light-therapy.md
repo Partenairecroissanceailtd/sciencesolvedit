@@ -18,7 +18,17 @@ faq:
     a: "Current evidence suggests daily use is safe. A 2021 review found no adverse effects from prolonged red light therapy use. However, eye protection is essential during sessions."
 ---
 
-## 2026 Red Light Therapy Buyer's Guide
+**Disclosure:** We are a participant in the Amazon Services LLC Associates Program. [Check current prices on Amazon](https://www.amazon.com/dp/B08Z761MHR?tag=sciencesolved-20).
+
+---
+
+## Related Reading
+
+- [Cold Plunge on Any Budget](/guides/2026-06-17-cold-plunge-any-budget/) — Pair red light with cold exposure for optimal recovery
+- [Infrared Sauna Blanket Guide](/guides/2026-06-17-complete-guide-infrared-sauna-blankets/) — Combine red light panels with infrared sauna therapy
+- [Best Smart Rings Compared](/comparisons/2026-06-17-best-smart-rings-compared/) — Track sleep improvements from red light therapy
+
+## Red Light Therapy Buyer's Guide
 
 Red light therapy has moved from clinical settings to home use, with a growing body of evidence supporting its benefits for skin health, muscle recovery, joint pain, and overall wellness. But choosing the right panel can be overwhelming — different wavelengths, irradiance levels, sizes, and price points.
 
