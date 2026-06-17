@@ -28,22 +28,68 @@ const slug = id.replace('comparisons/', '');
   ]}
 >
   <article class="container-narrow" style="padding:2rem 0">
+    <!-- Header -->
     <div style="margin-bottom:2rem">
-      <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem">
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem; align-items:center">
         <span class="tag">{entry.data.category.replace(/-/g, ' ')}</span>
-        {entry.data.winner && <span class="tag-green">Winner: {entry.data.winner}</span>}
+        {entry.data.winner && <span class="tag-green" style="font-size:0.9rem">🏆 Winner: {entry.data.winner}</span>}
       </div>
       <h1>{entry.data.title}</h1>
       <p style="font-size:1.1rem; color:var(--text-muted); margin-top:0.75rem">{entry.data.description}</p>
     </div>
 
-    <div class="affiliate-disclosure">
+    <!-- Verdict First -->
+    {entry.data.winner && (
+      <div class="card" style="margin-bottom:2rem; border-color:var(--green); background:var(--bg-card)">
+        <h3 style="margin:0 0 0.5rem; color:var(--green)">🏆 Our Verdict</h3>
+        <p style="margin:0; color:var(--text); font-size:0.95rem">
+          We recommend <strong>{entry.data.winner}</strong> for most people. See the full breakdown below to decide which is right for you.
+        </p>
+      </div>
+    )}
+
+    <!-- Products being compared -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin-bottom:2rem">
+      {entry.data.products.map(product => (
+        <div class="card" style="text-align:center; padding:1.5rem">
+          <div style="font-size:3rem; margin-bottom:0.5rem">{product.emoji || '📦'}</div>
+          <h4 style="margin:0 0 0.25rem; font-size:1rem">{product.name || product}</h4>
+          {product.score && (
+            <div style="font-size:1.5rem; font-weight:700; color:product.score >= 4 ? 'var(--green)' : product.score >= 3 ? 'var(--amber)' : 'var(--red)'">
+              {product.score}/5
+            </div>
+          )}
+          {product.price && <div style="font-size:0.85rem; color:var(--text-muted); margin-top:0.25rem">${product.price}</div>}
+          {product.url && (
+            <a href={product.url} target="_blank" class="btn btn-green" style="margin-top:1rem; font-size:0.8rem; padding:0.5rem 1rem; display:inline-block">
+              Check Price
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <div class="affiliate-disclosure" style="margin-bottom:1.5rem">
       We earn a commission if you purchase through our links, at no extra cost to you.
     </div>
 
+    <!-- Full Comparison Content -->
     <div class="prose">
       <Content />
     </div>
+
+    <!-- Final Verdict -->
+    {entry.data.winner && (
+      <div class="card" style="margin:2rem 0; border-color:var(--accent)">
+        <h3 style="margin:0 0 0.5rem">Final Verdict</h3>
+        <p style="margin:0; color:var(--text-muted); font-size:0.95rem">
+          {entry.data.description}
+        </p>
+        <p style="margin-top:0.75rem; font-weight:600; color:var(--text)">
+          Recommendation: <span style="color:var(--green)">{entry.data.winner}</span> is our pick for most buyers.
+        </p>
+      </div>
+    )}
 
     <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border)">
       <a href="/comparisons/" style="color:var(--text-muted)">← All Comparisons</a>

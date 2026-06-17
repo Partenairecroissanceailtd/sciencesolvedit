@@ -14,6 +14,7 @@ const { id } = Astro.props;
 const entry = await getEntry('reviews', id);
 const { Content } = await render(entry);
 const slug = id.replace('reviews/', '');
+const hasFaq = entry.data.faq && entry.data.faq.length > 0;
 ---
 
 <BaseLayout
@@ -35,37 +36,67 @@ const slug = id.replace('reviews/', '');
     "offers": {
       "@type": "Offer",
       "price": entry.data.price,
-      "priceCurrency": "USD"
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": entry.data.affiliateUrl || undefined
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": entry.data.rating,
-      "bestRating": 5,
-      "worstRating": 1,
-      "reviewCount": 1
+    "review": {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": entry.data.rating,
+        "bestRating": 5
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Science Solved It"
+      }
     }
   }}
 >
   <article class="container-narrow" style="padding:2rem 0">
-    <div style="margin-bottom:2rem">
-      <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem">
-        <span class="tag">{entry.data.category.replace(/-/g, ' ')}</span>
-        <span class="tag-green" style="font-size:1rem">★ {entry.data.rating}/5</span>
-        <span class="price-badge">${entry.data.price}</span>
-      </div>
-      <h1>{entry.data.title}</h1>
-      <p style="font-size:1.1rem; color:var(--text-muted); margin-top:0.75rem">
-        {entry.data.description}
-      </p>
+    <!-- Category tags + score badge row -->
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem; align-items:center">
+      <span class="tag">{entry.data.category.replace(/-/g, ' ')}</span>
+      <span class="tag-green" style="font-size:1rem; padding:0.3rem 0.8rem">★ {entry.data.rating}/5</span>
+      <span class="price-badge" style="font-size:0.9rem">${entry.data.price}</span>
     </div>
 
+    <h1 style="font-size:2rem; line-height:1.2">{entry.data.title}</h1>
+
+    <!-- Quick Verdict box -->
+    <div class="card" style="margin:1.5rem 0; border-color:var(--accent); background:var(--bg-card)">
+      <h3 style="margin:0 0 0.5rem; font-size:1rem; color:var(--accent)">Quick Verdict</h3>
+      <p style="margin:0; font-size:0.95rem; color:var(--text)">{entry.data.description}</p>
+      {entry.data.affiliateUrl && (
+        <div style="margin-top:1rem">
+          <a href={entry.data.affiliateUrl} target="_blank" class="btn btn-green" style="font-size:0.9rem; padding:0.6rem 1.2rem">
+            → Check Latest Price
+          </a>
+        </div>
+      )}
+    </div>
+
+    <!-- Table of Contents (visible if content has headings) -->
+    <details class="card" style="margin-bottom:1.5rem; padding:0.75rem 1rem; cursor:pointer">
+      <summary style="font-weight:600; color:var(--text); cursor:pointer">Table of Contents</summary>
+      <div style="margin-top:0.75rem; display:flex; flex-direction:column; gap:0.35rem; font-size:0.9rem">
+        {entry.data.pros?.length > 0 && <a href="#pros-cons" style="color:var(--text-muted)">Pros & Cons</a>}
+        {entry.data.specs && <a href="#specs" style="color:var(--text-muted)">Specifications</a>}
+        <a href="#full-review" style="color:var(--text-muted)">Full Review</a>
+        {entry.data.affiliateUrl && <a href="#buy" style="color:var(--text-muted)">Where to Buy</a>}
+        {hasFaq && <a href="#faq" style="color:var(--text-muted)">FAQ</a>}
+      </div>
+    </details>
+
+    <!-- Pros & Cons side-by-side -->
     {(entry.data.pros?.length > 0 || entry.data.cons?.length > 0) && (
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2rem">
+      <div id="pros-cons" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2rem">
         {entry.data.pros?.length > 0 && (
           <div class="card" style="border-color: var(--green)">
             <h3 style="color:var(--green); margin:0 0 0.75rem">✅ Pros</h3>
             <ul style="margin:0">
-              {entry.data.pros.map(p => <li style="color:var(--text); list-style:none; padding-left:0">{p}</li>)}
+              {entry.data.pros.map(p => <li style="color:var(--text); list-style:none; padding-left:0; margin-bottom:0.4rem">• {p}</li>)}
             </ul>
           </div>
         )}
@@ -73,42 +104,91 @@ const slug = id.replace('reviews/', '');
           <div class="card" style="border-color: var(--red)">
             <h3 style="color:var(--red); margin:0 0 0.75rem">❌ Cons</h3>
             <ul style="margin:0">
-              {entry.data.cons.map(c => <li style="color:var(--text); list-style:none; padding-left:0">{c}</li>)}
+              {entry.data.cons.map(c => <li style="color:var(--text); list-style:none; padding-left:0; margin-bottom:0.4rem">• {c}</li>)}
             </ul>
           </div>
         )}
       </div>
     )}
 
+    <!-- Specs Table -->
     {entry.data.specs && (
-      <div class="card" style="margin-bottom:2rem">
+      <div id="specs" class="card" style="margin-bottom:2rem">
         <h3 style="margin-bottom:1rem">Specifications</h3>
         <table style="width:100%">
           <tbody>
             {Object.entries(entry.data.specs).map(([key, val]) => (
-              <tr><td style="font-weight:600; padding:0.5rem 1rem 0.5rem 0; color:var(--text)">{key}</td><td style="padding:0.5rem 0; color:var(--text-muted)">{val}</td></tr>
+              <tr>
+                <td style="font-weight:600; padding:0.5rem 1rem 0.5rem 0; color:var(--text); white-space:nowrap; vertical-align:top">{key}</td>
+                <td style="padding:0.5rem 0; color:var(--text-muted)">{val}</td>
+              </tr>
             ))}
           </tbody>
         </table>
       </div>
     )}
 
-    <div class="affiliate-disclosure">
+    <!-- Affiliate CTA after specs -->
+    {entry.data.affiliateUrl && (
+      <div style="text-align:center; margin:2rem 0">
+        <a href={entry.data.affiliateUrl} target="_blank" class="btn btn-green" style="font-size:1rem; padding:0.8rem 1.8rem">
+          → Check Price at {entry.data.brand || 'Store'}
+        </a>
+        <p style="font-size:0.75rem; margin-top:0.5rem; color:var(--text-muted)">Prices accurate at time of writing</p>
+      </div>
+    )}
+
+    <!-- Affiliate Disclosure -->
+    <div class="affiliate-disclosure" style="margin-bottom:1.5rem">
       We earn a commission if you purchase through our links, at no extra cost to you.
     </div>
 
-    <div class="prose">
+    <!-- Full Review Content -->
+    <div id="full-review" class="prose">
       <Content />
     </div>
 
+    <!-- Who should buy section from content or fallback -->
+    <div class="card" style="margin:2rem 0; border-color:var(--accent)">
+      <h3 style="margin:0 0 0.5rem">Who Should Buy This?</h3>
+      <p style="margin:0; color:var(--text-muted); font-size:0.95rem">
+        If you're looking for {entry.data.description.toLowerCase().replace(/\.$/, '')}, 
+        this device is worth considering. Best suited for {entry.data.rating >= 4 ? 'those who prioritize quality and are willing to invest.' : 'budget-conscious buyers who need solid performance without the premium price.'}
+      </p>
+      {entry.data.affiliateUrl && (
+        <div style="margin-top:1rem">
+          <a href={entry.data.affiliateUrl} target="_blank" class="btn btn-green" style="font-size:0.9rem; padding:0.6rem 1.2rem">
+            → See Current Price
+          </a>
+        </div>
+      )}
+    </div>
+
+    <!-- FAQ Section -->
+    {hasFaq && (
+      <div id="faq" style="margin:2rem 0">
+        <h2>Frequently Asked Questions</h2>
+        {entry.data.faq.map((item, i) => (
+          <details class="card" style="margin-top:0.75rem; padding:1rem; cursor:pointer">
+            <summary style="font-weight:600; color:var(--text); cursor:pointer; font-size:0.95rem">Q: {item.q}</summary>
+            <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--text-muted)">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    )}
+
+    <!-- Final CTA -->
     {entry.data.affiliateUrl && (
-      <div style="text-align:center; margin:3rem 0">
-        <a href={entry.data.affiliateUrl} target="_blank" class="btn btn-green" style="font-size:1.1rem; padding:1rem 2rem">
-          → Check Current Price at {entry.data.brand || 'Store'}
+      <div id="buy" style="text-align:center; margin:3rem 0; padding:2rem; background:var(--bg-card); border:1px solid var(--border); border-radius:0.75rem">
+        <h3 style="margin-bottom:0.5rem">Ready to Buy?</h3>
+        <p style="font-size:0.9rem; margin-bottom:1.5rem">{entry.data.title} is available at the link below.</p>
+        <a href={entry.data.affiliateUrl} target="_blank" class="btn btn-green" style="font-size:1.1rem; padding:1rem 2.5rem">
+          → Check Latest Price — ${entry.data.price}
         </a>
       </div>
     )}
 
+    <!-- Navigation -->
     <div style="display:flex; justify-content:space-between; margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border)">
       <a href="/reviews/" style="color:var(--text-muted)">← All Reviews</a>
       <a href="/guides/" style="color:var(--text-muted)">Buyer's Guides →</a>

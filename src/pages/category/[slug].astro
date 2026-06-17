@@ -19,10 +19,14 @@ const reviews = (await getCollection('reviews')).filter(r => r.data.category ===
 const guides = (await getCollection('guides')).filter(g => g.data.category === slug);
 const comparisons = (await getCollection('comparisons')).filter(c => c.data.category === slug);
 const categoryName = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+const allItems = [...reviews, ...guides, ...comparisons].sort(
+  (a, b) => (b.data.publishedDate?.getTime() || 0) - (a.data.publishedDate?.getTime() || 0)
+);
+const featured = allItems.slice(0, 3);
 ---
 
 <BaseLayout
-  title={`${categoryName} — Science Solved It`}
+  title={`${categoryName} Reviews & Guides — Science Solved It`}
   description={`Research-backed ${categoryName.toLowerCase()} reviews, buyer's guides, and product comparisons. Evidence-based buying advice.`}
   breadcrumbs={[
     { name: 'Home', url: '/' },
@@ -30,61 +34,109 @@ const categoryName = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase
   ]}
 >
   <div class="container" style="padding:2rem 0">
-    <h1 style="margin-bottom:0.5rem">{categoryName}</h1>
+    <h1 style="margin-bottom:0.5rem; text-transform:capitalize">{categoryName}</h1>
     <p style="font-size:1.1rem; margin-bottom:2rem; color:var(--text-muted)">
       {reviews.length} reviews · {guides.length} guides · {comparisons.length} comparisons
     </p>
 
+    <!-- Featured Items (Quick Picks style) -->
+    {featured.length > 0 && (
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem; margin-bottom:3rem">
+        {featured.map(item => {
+          const isReview = reviews.includes(item);
+          const isGuide = guides.includes(item);
+          const itemSlug = item.id.replace(/^(reviews|guides|comparisons)\//, '');
+          const prefix = isReview ? 'reviews' : isGuide ? 'guides' : 'comparisons';
+          return (
+            <a href={`/${prefix}/${itemSlug}/`} class="card" style="text-decoration:none; color:inherit; border-color:var(--accent)">
+              {isReview && (
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem">
+                  <span class="tag" style="background:var(--green); font-size:0.75rem">★ {item.data.rating}/5</span>
+                  <span class="price-badge" style="font-size:0.8rem">${item.data.price}</span>
+                </div>
+              )}
+              {isGuide && (
+                <div style="margin-bottom:0.5rem">
+                  <span class="tag" style="background:var(--accent); font-size:0.75rem">{item.data.products} products</span>
+                </div>
+              )}
+              {comparisons.includes(item) && item.data.winner && (
+                <div style="margin-bottom:0.5rem">
+                  <span class="tag-green" style="font-size:0.75rem">🏆 Winner: {item.data.winner}</span>
+                </div>
+              )}
+              <h3 style="font-size:1rem; margin:0">{item.data.title}</h3>
+              <p style="font-size:0.85rem; margin-top:0.25rem; color:var(--text-muted)">{item.data.description}</p>
+            </a>
+          );
+        })}
+      </div>
+    )}
+
+    <!-- Guides Section -->
     {guides.length > 0 && (
-      <>
-        <h2 style="margin-bottom:1rem">Buyer's Guides</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem; margin-bottom:2rem">
+      <section style="margin-bottom:2rem">
+        <h2 style="margin-bottom:1rem; border-bottom:1px solid var(--border); padding-bottom:0.5rem">Buyer's Guides</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem">
           {guides.map(g => {
-        const gslug = g.id.replace('guides/', '');
-        return (
-            <a href={`/guides/${gslug}/`} class="card" style="text-decoration:none; color:inherit">
-              <h3 style="font-size:1rem; margin-bottom:0.5rem">{g.data.title}</h3>
-              <p style="font-size:0.85rem">{g.data.description}</p>
-            </a>
-        );})}
+            const gslug = g.id.replace('guides/', '');
+            return (
+              <a href={`/guides/${gslug}/`} class="card" style="text-decoration:none; color:inherit">
+                <h3 style="font-size:1rem; margin-bottom:0.5rem">{g.data.title}</h3>
+                <p style="font-size:0.85rem; color:var(--text-muted)">{g.data.description}</p>
+                <div style="margin-top:0.5rem; font-size:0.8rem; color:var(--accent)">{g.data.products} products compared →</div>
+              </a>
+            );
+          })}
         </div>
-      </>
+      </section>
     )}
 
+    <!-- Reviews Section -->
     {reviews.length > 0 && (
-      <>
-        <h2 style="margin-bottom:1rem">Reviews</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem; margin-bottom:2rem">
+      <section style="margin-bottom:2rem">
+        <h2 style="margin-bottom:1rem; border-bottom:1px solid var(--border); padding-bottom:0.5rem">Individual Reviews</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem">
           {reviews.map(r => {
-        const slug = r.id.replace('reviews/', '');
-        return (
-            <a href={`/reviews/${slug}/`} class="card" style="text-decoration:none; color:inherit">
-              <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem">
-                <span style="color:var(--green); font-weight:600">★ {r.data.rating}</span>
-                <span style="color:var(--text-muted)">${r.data.price}</span>
-              </div>
-              <h3 style="font-size:1rem; margin-bottom:0.5rem">{r.data.title}</h3>
-              <p style="font-size:0.85rem">{r.data.description}</p>
-            </a>
-        );})}
+            const rslug = r.id.replace('reviews/', '');
+            return (
+              <a href={`/reviews/${rslug}/`} class="card" style="text-decoration:none; color:inherit">
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem">
+                  <span style="color:var(--green); font-weight:600">★ {r.data.rating}/5</span>
+                  <span style="color:var(--text-muted)">${r.data.price}</span>
+                </div>
+                <h3 style="font-size:1rem; margin-bottom:0.5rem">{r.data.title}</h3>
+                <p style="font-size:0.85rem; color:var(--text-muted)">{r.data.description}</p>
+              </a>
+            );
+          })}
         </div>
-      </>
+      </section>
     )}
 
+    <!-- Comparisons Section -->
     {comparisons.length > 0 && (
-      <>
-        <h2 style="margin-bottom:1rem">Comparisons</h2>
+      <section style="margin-bottom:2rem">
+        <h2 style="margin-bottom:1rem; border-bottom:1px solid var(--border); padding-bottom:0.5rem">Product Comparisons</h2>
         <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem">
           {comparisons.map(c => {
-        const cslug = c.id.replace('comparisons/', '');
-        return (
-            <a href={`/comparisons/${cslug}/`} class="card" style="text-decoration:none; color:inherit">
-              <h3 style="font-size:1rem; margin-bottom:0.5rem">{c.data.title}</h3>
-              <p style="font-size:0.85rem">{c.data.description}</p>
-            </a>
-        );})}
+            const cslug = c.id.replace('comparisons/', '');
+            return (
+              <a href={`/comparisons/${cslug}/`} class="card" style="text-decoration:none; color:inherit">
+                <h3 style="font-size:1rem; margin-bottom:0.5rem">{c.data.title}</h3>
+                <p style="font-size:0.85rem; color:var(--text-muted)">{c.data.description}</p>
+                {c.data.winner && <div style="margin-top:0.5rem; font-size:0.8rem; color:var(--green)">🏆 {c.data.winner}</div>}
+              </a>
+            );
+          })}
         </div>
-      </>
+      </section>
+    )}
+
+    {allItems.length === 0 && (
+      <div class="card" style="text-align:center; padding:3rem">
+        <p style="color:var(--text-muted); font-size:1.1rem">No content yet for this category. Check back soon!</p>
+      </div>
     )}
   </div>
 </BaseLayout>

@@ -5,6 +5,14 @@ import { getCollection } from 'astro:content';
 const reviews = await getCollection('reviews');
 const guides = await getCollection('guides');
 const comparisons = await getCollection('comparisons');
+
+const categories = [
+  { slug: 'red-light-therapy', emoji: '🔴', name: 'Red Light Therapy', desc: 'Panels, masks, belts' },
+  { slug: 'cold-plunge', emoji: '🧊', name: 'Cold Plunge', desc: 'Tubs, chillers, accessories' },
+  { slug: 'pemf', emoji: '🧲', name: 'PEMF Therapy', desc: 'Mats, pads, devices' },
+  { slug: 'wearables', emoji: '⌚', name: 'Wearables', desc: 'HRV, sleep, recovery trackers' },
+  { slug: 'sauna', emoji: '♨️', name: 'Sauna', desc: 'Infrared, blankets, heaters' },
+];
 ---
 
 <BaseLayout 
@@ -12,6 +20,7 @@ const comparisons = await getCollection('comparisons');
   description="Independent, research-backed reviews of red light therapy, cold plunge, PEMF, wearables, and biohacking hardware. Find the best gear for your body."
   breadcrumbs={[{ name: 'Home', url: '/' }]}
 >
+  <!-- Hero Section -->
   <section class="hero">
     <div class="container" style="text-align:center; padding:4rem 0">
       <h1 style="font-size:3rem; margin-bottom:1rem">
@@ -28,85 +37,93 @@ const comparisons = await getCollection('comparisons');
     </div>
   </section>
 
+  <!-- Category Grid -->
+  <section class="container" style="padding:0 0 3rem">
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:1rem">
+      {categories.map(cat => (
+        <a href={`/category/${cat.slug}/`} class="card" style="text-align:center; text-decoration:none; color:inherit; padding:2rem 1rem; display:flex; flex-direction:column; align-items:center; gap:0.5rem">
+          <div style="font-size:2.5rem">{cat.emoji}</div>
+          <h3 style="font-size:1rem; margin:0">{cat.name}</h3>
+          <p style="font-size:0.8rem; margin:0; color:var(--text-muted)">{cat.desc}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Featured Guides (Best of / Pillar style) -->
+  {guides.length > 0 && (
+    <section class="container" style="padding:2rem 0; border-top:1px solid var(--border)">
+      <h2 style="margin-bottom:1.5rem">Featured Buyer's Guides</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1.5rem">
+        {guides.slice(-4).reverse().map(g => {
+          const guideSlug = g.id.replace('guides/', '');
+          return (
+          <a href={`/guides/${guideSlug}/`} style="text-decoration:none; color:inherit">
+            <div class="card">
+              <h3 style="margin-bottom:0.5rem">{g.data.title}</h3>
+              <p style="font-size:0.9rem; color:var(--text-muted)">{g.data.description}</p>
+              <div style="margin-top:0.75rem; font-size:0.85rem; color:var(--text-muted)">
+                {g.data.products} products compared
+              </div>
+            </div>
+          </a>
+        );})}
+      </div>
+      <div style="text-align:center; margin-top:2rem">
+        <a href="/guides/" class="btn btn-outline">All Buyer's Guides →</a>
+      </div>
+    </section>
+  )}
+
   <!-- Latest Reviews -->
-  <section class="container" style="padding:2rem 0">
-    <h2 style="margin-bottom:1.5rem">Latest Reviews</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1.5rem">
-      {reviews.slice(-6).reverse().map(r => {
-        const reviewSlug = r.id.replace('reviews/', '');
-        return (
-        <a href={`/reviews/${reviewSlug}/`} style="text-decoration:none; color:inherit">
-          <div class="card">
-            <div style="display:flex; justify-content:space-between; align-items:start; margin-bottom:0.75rem">
-              <span class="tag" style="background:var(--accent)">{r.data.category}</span>
-              <span class="price-badge" style="font-size:0.9rem">${r.data.price}</span>
+  {reviews.length > 0 && (
+    <section class="container" style="padding:2rem 0; border-top:1px solid var(--border)">
+      <h2 style="margin-bottom:1.5rem">Latest Reviews</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1.5rem">
+        {reviews.slice(-6).reverse().map(r => {
+          const reviewSlug = r.id.replace('reviews/', '');
+          return (
+          <a href={`/reviews/${reviewSlug}/`} style="text-decoration:none; color:inherit">
+            <div class="card">
+              <div style="display:flex; justify-content:space-between; align-items:start; margin-bottom:0.75rem">
+                <span class="tag" style="background:var(--accent)">{r.data.category}</span>
+                <span class="price-badge" style="font-size:0.9rem">${r.data.price}</span>
+              </div>
+              <h3 style="margin-bottom:0.5rem; font-size:1.15rem">{r.data.title}</h3>
+              <p style="font-size:0.9rem; color:var(--text-muted)">{r.data.description}</p>
+              <div style="margin-top:0.75rem; font-size:0.85rem; color:var(--green)">
+                ★ {r.data.rating}/5 — {r.data.pros?.length || 0} pros, {r.data.cons?.length || 0} cons
+              </div>
             </div>
-            <h3 style="margin-bottom:0.5rem; font-size:1.15rem">{r.data.title}</h3>
-            <p style="font-size:0.9rem; color:var(--text-muted)">{r.data.description}</p>
-            <div style="margin-top:0.75rem; font-size:0.85rem; color:var(--green)">
-              ★ {r.data.rating}/5 — {r.data.pros?.length || 0} pros, {r.data.cons?.length || 0} cons
-            </div>
-          </div>
-        </a>
-      );})}
-    </div>
-    <div style="text-align:center; margin-top:2rem">
-      <a href="/reviews/" class="btn btn-outline">View All Reviews →</a>
-    </div>
-  </section>
+          </a>
+        );})}
+      </div>
+      <div style="text-align:center; margin-top:2rem">
+        <a href="/reviews/" class="btn btn-outline">View All Reviews →</a>
+      </div>
+    </section>
+  )}
 
-  <!-- Featured Guides -->
-  <section class="container" style="padding:3rem 0">
-    <h2 style="margin-bottom:1.5rem">Buyer's Guides</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1.5rem">
-      {guides.slice(-4).reverse().map(g => {
-        const guideSlug = g.id.replace('guides/', '');
-        return (
-        <a href={`/guides/${guideSlug}/`} style="text-decoration:none; color:inherit">
-          <div class="card">
-            <h3 style="margin-bottom:0.5rem">{g.data.title}</h3>
-            <p style="font-size:0.9rem; color:var(--text-muted)">{g.data.description}</p>
-            <div style="margin-top:0.75rem; font-size:0.85rem; color:var(--text-muted)">
-              {g.data.products} products compared
-            </div>
-          </div>
-        </a>
-      );})}
-    </div>
-    <div style="text-align:center; margin-top:2rem">
-      <a href="/guides/" class="btn btn-outline">All Buyer's Guides →</a>
-    </div>
-  </section>
+  <!-- Comparison Teaser -->
+  {comparisons.length > 0 && (
+    <section class="container" style="padding:2rem 0; border-top:1px solid var(--border)">
+      <div class="card" style="text-align:center; padding:2.5rem; border-color:var(--accent)">
+        <h2 style="margin-bottom:0.5rem">Compare Side by Side</h2>
+        <p style="font-size:1rem; margin-bottom:1.5rem">See how the top devices stack up against each other.</p>
+        <a href="/comparisons/" class="btn btn-primary">View All Comparisons →</a>
+      </div>
+    </section>
+  )}
 
-  <!-- By Category -->
+  <!-- Newsletter -->
   <section class="container" style="padding:2rem 0 4rem">
-    <h2 style="margin-bottom:1.5rem">Shop by Category</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:1rem">
-      <a href="/category/red-light-therapy/" class="card" style="text-align:center; text-decoration:none; color:inherit; padding:2rem 1rem">
-        <div style="font-size:2.5rem; margin-bottom:0.5rem">🔴</div>
-        <h3 style="font-size:1rem">Red Light Therapy</h3>
-        <p style="font-size:0.85rem">Panels, masks, belts</p>
-      </a>
-      <a href="/category/cold-plunge/" class="card" style="text-align:center; text-decoration:none; color:inherit; padding:2rem 1rem">
-        <div style="font-size:2.5rem; margin-bottom:0.5rem">🧊</div>
-        <h3 style="font-size:1rem">Cold Plunge</h3>
-        <p style="font-size:0.85rem">Tubs, chillers, accessories</p>
-      </a>
-      <a href="/category/pemf/" class="card" style="text-align:center; text-decoration:none; color:inherit; padding:2rem 1rem">
-        <div style="font-size:2.5rem; margin-bottom:0.5rem">🧲</div>
-        <h3 style="font-size:1rem">PEMF Therapy</h3>
-        <p style="font-size:0.85rem">Mats, pads, devices</p>
-      </a>
-      <a href="/category/wearables/" class="card" style="text-align:center; text-decoration:none; color:inherit; padding:2rem 1rem">
-        <div style="font-size:2.5rem; margin-bottom:0.5rem">⌚</div>
-        <h3 style="font-size:1rem">Wearables</h3>
-        <p style="font-size:0.85rem">HRV, sleep, recovery</p>
-      </a>
-      <a href="/category/sauna/" class="card" style="text-align:center; text-decoration:none; color:inherit; padding:2rem 1rem">
-        <div style="font-size:2.5rem; margin-bottom:0.5rem">♨️</div>
-        <h3 style="font-size:1rem">Sauna</h3>
-        <p style="font-size:0.85rem">Infrared, blankets</p>
-      </a>
+    <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:0.75rem; padding:2.5rem; text-align:center">
+      <h2 style="margin-bottom:0.5rem">Stay Updated</h2>
+      <p style="font-size:0.95rem; max-width:450px; margin:0 auto 1.5rem">Get the latest biohacking hardware reviews and comparisons delivered to your inbox.</p>
+      <form action="https://www.sciencesolvedit.store/" method="get" style="display:flex; gap:0.5rem; max-width:400px; margin:0 auto; flex-wrap:wrap; justify-content:center" onsubmit="event.preventDefault(); alert('Newsletter coming soon!')">
+        <input type="email" placeholder="your@email.com" style="flex:1; min-width:200px; padding:0.75rem 1rem; border-radius:0.5rem; border:1px solid var(--border); background:var(--bg); color:var(--text); font-size:0.9rem" required />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
     </div>
   </section>
 </BaseLayout>

@@ -14,6 +14,7 @@ const { id } = Astro.props;
 const entry = await getEntry('guides', id);
 const { Content } = await render(entry);
 const slug = id.replace('guides/', '');
+const hasFaq = entry.data.faq && entry.data.faq.length > 0;
 ---
 
 <BaseLayout
@@ -35,22 +36,89 @@ const slug = id.replace('guides/', '');
   }}
 >
   <article class="container-narrow" style="padding:2rem 0">
-    <div style="margin-bottom:2rem">
-      <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem">
+    <!-- Header -->
+    <div style="margin-bottom:1.5rem">
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem; align-items:center">
         <span class="tag">{entry.data.category.replace(/-/g, ' ')}</span>
-        <span class="tag-amber">{entry.data.products} products compared</span>
+        <span class="tag-amber" style="font-size:0.85rem">{entry.data.products} products compared</span>
+        {entry.data.bestPick && <span class="tag-green" style="font-size:0.85rem">🏆 Best: {entry.data.bestPick}</span>}
       </div>
-      <h1>{entry.data.title}</h1>
+      <h1 style="font-size:2rem; line-height:1.2">{entry.data.title}</h1>
       <p style="font-size:1.1rem; color:var(--text-muted); margin-top:0.75rem">{entry.data.description}</p>
+      {entry.data.publishedDate && (
+        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.5rem">Updated: {entry.data.publishedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      )}
     </div>
 
-    <div class="affiliate-disclosure">
+    <!-- Quick Picks Table (if bestPick is set) -->
+    {entry.data.bestPick && (
+      <div class="card" style="margin-bottom:2rem; border-color:var(--accent)">
+        <h3 style="margin:0 0 0.75rem; color:var(--accent); font-size:1rem">🏆 Quick Pick</h3>
+        <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap">
+          <div style="flex:1; min-width:200px">
+            <div style="font-weight:700; font-size:1.1rem; color:var(--text)">{entry.data.bestPick}</div>
+            <p style="font-size:0.9rem; color:var(--text-muted); margin:0.25rem 0">{entry.data.description}</p>
+          </div>
+          {entry.data.affiliateUrl && (
+            <a href={entry.data.affiliateUrl} target="_blank" class="btn btn-green" style="font-size:0.9rem; padding:0.6rem 1.2rem; white-space:nowrap">
+              Check Price →
+            </a>
+          )}
+        </div>
+      </div>
+    )}
+
+    <!-- Table of Contents -->
+    <details class="card" style="margin-bottom:1.5rem; padding:0.75rem 1rem; cursor:pointer">
+      <summary style="font-weight:600; color:var(--text); cursor:pointer">Table of Contents</summary>
+      <div style="margin-top:0.75rem; display:flex; flex-direction:column; gap:0.35rem; font-size:0.9rem">
+        <a href="#guide-intro" style="color:var(--text-muted)">Overview</a>
+        <a href="#guide-content" style="color:var(--text-muted)">Full Guide</a>
+        {hasFaq && <a href="#guide-faq" style="color:var(--text-muted)">FAQ</a>}
+      </div>
+    </details>
+
+    <div class="affiliate-disclosure" style="margin-bottom:1.5rem">
       We earn a commission if you purchase through our links, at no extra cost to you.
     </div>
 
-    <div class="prose">
+    <!-- Guide Intro -->
+    <div id="guide-intro" class="prose">
       <Content />
     </div>
+
+    <!-- Related category links -->
+    <div style="margin:2rem 0; display:flex; gap:0.75rem; flex-wrap:wrap">
+      <a href={`/category/${entry.data.category}/`} class="btn btn-outline" style="font-size:0.85rem; padding:0.5rem 1rem">
+        Browse All {entry.data.category.replace(/-/g, ' ')}
+      </a>
+      <a href={`/reviews/`} class="btn btn-outline" style="font-size:0.85rem; padding:0.5rem 1rem">
+        Individual Reviews
+      </a>
+    </div>
+
+    <!-- Affiliate CTA -->
+    {entry.data.affiliateUrl && (
+      <div style="text-align:center; margin:2rem 0; padding:1.5rem; background:var(--bg-card); border:1px solid var(--border); border-radius:0.75rem">
+        <p style="font-size:0.9rem; margin-bottom:1rem">Ready to make a purchase? Compare prices and find the best deal.</p>
+        <a href={entry.data.affiliateUrl} target="_blank" class="btn btn-green" style="font-size:1rem; padding:0.8rem 2rem">
+          → Shop Now — From ${entry.data.priceRange || 'Various Prices'}
+        </a>
+      </div>
+    )}
+
+    <!-- FAQ Section -->
+    {hasFaq && (
+      <div id="guide-faq" style="margin:2rem 0">
+        <h2>Frequently Asked Questions</h2>
+        {entry.data.faq.map((item, i) => (
+          <details class="card" style="margin-top:0.75rem; padding:1rem; cursor:pointer">
+            <summary style="font-weight:600; color:var(--text); cursor:pointer; font-size:0.95rem">Q: {item.q}</summary>
+            <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--text-muted)">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    )}
 
     <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border)">
       <a href="/guides/" style="color:var(--text-muted)">← All Buyer's Guides</a>
