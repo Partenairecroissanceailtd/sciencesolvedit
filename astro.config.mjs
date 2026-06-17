@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.sciencesolvedit.store',
+  site: 'https://sciencesolvedit.store',
   vite: {
     plugins: [tailwindcss()]
   }

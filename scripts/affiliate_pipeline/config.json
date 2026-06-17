@@ -70,9 +70,12 @@
     "min_relevance_score": 2,
     "expansion_rule": "If the product solves a measurable human problem and has research/studies backing it, it fits. Creative freedom within 'science + solution.'"
   },
+  "apify": {
+    "api_key_env": "APIFY_API_KEY"
+  },
   "demand_research": {
-    "apify_actor": "TBD — user checking Apify Store",
-    "data_sources": ["Google Keyword Planner", "Ahrefs", "Apify Google Trends"],
+    "apify_actor": "junglee/free-amazon-product-scraper",
+    "data_sources": ["Google Keyword Planner", "Ahrefs", "Apify Actors"],
     "min_monthly_searches": 1000,
     "competitor_overlap_threshold": 0.3
   },

@@ -40,6 +40,7 @@ from content_pipeline import ContentPipeline
 
 # Network adapters
 from networks.partnerstack import PartnerStackAdapter
+from networks.amazon import AmazonAdapter
 HAS_PS = True
 
 logging.basicConfig(
@@ -299,9 +300,24 @@ def import_csv(csv_path: str, dry_run: bool = True):
     with open(path, newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
+            # Auto-generate Amazon affiliate links from product_url or ASIN
+            tracking_link = row.get("tracking_link", "").strip()
+            if not tracking_link and (row.get("product_url") or row.get("asin")):
+                try:
+                    from networks.amazon import AmazonAdapter
+                    tag = row.get("amazon_tag", row.get("tracking_tag", ""))
+                    ada = AmazonAdapter(tag)
+                    asin = ada.extract_asin(row.get("product_url", "") or row.get("asin", ""))
+                    if asin:
+                        tracking_link = ada.build_affiliate_link(asin)
+                        row["network"] = "amazon"
+                        row["offer_id"] = asin
+                except Exception:
+                    pass
+
             # Skip rows without tracking links
-            if not row.get("tracking_link", "").strip():
-                logger.info(f"Skipping {row.get('program_name', '?')} — no tracking_link")
+            if not tracking_link:
+                logger.info(f"Skipping {row.get('program_name', '?')} — no tracking_link or product_url/asin")
                 continue
 
             price = None
@@ -330,7 +346,7 @@ def import_csv(csv_path: str, dry_run: bool = True):
                 commission_type=row.get("commission_type", "percentage"),
                 commission_value=commission_value,
                 cookie_days=int(row.get("cookie_days", "30") or 30),
-                tracking_link=row.get("tracking_link", "").strip(),
+                tracking_link=tracking_link,
             )
             offers.append(offer)
 
@@ -374,6 +390,8 @@ def main():
     parser.add_argument("--output", type=str, help="Output CSV path")
     parser.add_argument("--import", dest="import_csv", type=str, help="Import a CSV with tracking links")
     parser.add_argument("--new-offer", action="store_true", help="Generate a blank CSV template")
+    parser.add_argument("--amazon-template", action="store_true", help="Generate an Amazon Associates CSV template with example products")
+    parser.add_argument("--amazon-tag", type=str, default="sciencesolved-20", help="Amazon Associates tracking tag (default: sciencesolved-20)")
     parser.add_argument("--dry-run", action="store_true", help="Preview without writing files")
 
     args = parser.parse_args()
@@ -383,6 +401,27 @@ def main():
         print(f"\n✅ Template generated: {path}")
         print("   1. Fill in program names, descriptions, and tracking links")
         print("   2. Run: python3 orchestrator.py --import filled.csv")
+        return
+
+    if args.amazon_template:
+        from networks.amazon import AmazonAdapter
+        import csv
+        tag = args.amazon_tag or "YOUR-TAG-20"
+        output = args.output or "amazon_products_template.csv"
+        headers = AmazonAdapter.csv_template_headers() + ["amazon_tag"]
+        rows = AmazonAdapter.csv_template_rows()
+        with open(output, "w", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(headers)
+            for row in rows:
+                w.writerow(row + [tag])
+        print(f"\n✅ Amazon template generated: {output}")
+        print(f"   Your tag: {tag}")
+        print("   1. Browse amazon.com for biohacking products")
+        print("   2. Copy product URLs into the CSV")
+        print("   3. Fill in product names, descriptions, categories")
+        print(f"   4. Run: python3 orchestrator.py --import {output}")
+        print(f"      (Your tag '{tag}' is already in the CSV)")
         return
 
     if args.import_csv:
