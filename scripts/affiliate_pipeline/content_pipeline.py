@@ -7,7 +7,7 @@ import json, os, textwrap
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
-from .config import AffiliateOffer, load_config, logger
+from config import AffiliateOffer, load_config, logger
 
 
 class ContentPipeline:

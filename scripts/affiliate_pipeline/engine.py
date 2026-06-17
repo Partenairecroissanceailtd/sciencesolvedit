@@ -6,7 +6,7 @@ Applies configurable filters across all network offers.
 from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Callable
-from .config import AffiliateOffer, load_config, logger
+from config import AffiliateOffer, load_config, logger
 
 
 class FilterEngine:
@@ -41,7 +41,10 @@ class FilterEngine:
         return results
 
     def score_offer(self, offer: AffiliateOffer) -> float:
-        """Score an offer on quality/fit (higher = better)."""
+        """Score an offer on quality/fit (higher = better).
+        
+        Heavily weighted toward mid-to-high ticket biohacking products.
+        """
         score = 50.0  # baseline
 
         # Commission bonus
@@ -58,11 +61,16 @@ class FilterEngine:
         elif offer.cookie_days >= 14:
             score += 2
 
-        # Price matters — higher ticket = better commission potential
-        if offer.price and offer.price > 500:
-            score += 10
+        # 💰 HIGH-TICKET FOCUS — heavy price weighting
+        # Premium biohacking hardware is the sweet spot
+        if offer.price and offer.price > 1000:
+            score += 30   # Saunas, full-body RL panels, high-end PEMF
+        elif offer.price and offer.price > 500:
+            score += 20   # Mid-range RL panels, Therabody, cryo chambers
         elif offer.price and offer.price > 200:
-            score += 5
+            score += 10   # Oura Ring, entry-level RL devices
+        elif offer.price and offer.price > 100:
+            score += 5    # Supplements, basic wearables
 
         # Geo relevance
         us_match = 1.0 if "US" in offer.geo_targets else 0.0
@@ -73,6 +81,9 @@ class FilterEngine:
             score += 5
         elif offer.merchant_rating > 3.0:
             score += 2
+
+        # 🧪 FUTURE: Demand signal bonus (Apify keyword volume data)
+        # score += demand_bonus  -- added when Apify pipeline is connected
 
         return round(min(score, 100), 1)
 
@@ -88,7 +99,18 @@ class FilterEngine:
     def _filter_niche(self, o: AffiliateOffer) -> bool:
         if not self.target_niches:
             return True
-        return o.category.lower() in {n.lower() for n in self.target_niches}
+        # Exact category match (fast path)
+        if o.category.lower() in {n.lower() for n in self.target_niches}:
+            return True
+        # Fuzzy: check if program name or description matches domain keywords
+        # This catches uncategorized but relevant products
+        domain_keywords = self.config.get("domain", {}).get("relevance_keywords", [])
+        text_to_check = f"{o.program_name} {o.description}".lower()
+        for kw in domain_keywords:
+            if kw.lower() in text_to_check:
+                logger.debug(f"Niche fuzzy-match: '{kw}' in '{o.program_name}'")
+                return True
+        return False
 
     def _filter_min_commission(self, o: AffiliateOffer) -> bool:
         return o.commission_value >= self.min_commission

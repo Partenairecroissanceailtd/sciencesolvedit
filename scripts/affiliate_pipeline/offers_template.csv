@@ -1,0 +1,4 @@
+network,offer_id,program_name,advertiser,description,category,price,commission_type,commission_value,cookie_days,tracking_link
+partnerstack,ex-1,Joovv Mini 2.0,Joovv,Red light therapy device for targeted treatment,red-light-therapy,$799,percentage,10,90,
+partnerstack,ex-2,Theragun Pro,Therabody,Professional percussive therapy device,wearables,$599,percentage,8,30,
+partnerstack,ex-3,Oura Ring Gen 4,Oura,Smart ring for sleep and activity tracking,wearables,$349,fixed,20,30,

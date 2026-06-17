@@ -25,9 +25,56 @@
       "pemf",
       "wearables",
       "sauna",
-      "biohacking"
+      "biohacking",
+      "supplements",
+      "health-monitoring",
+      "home-health",
+      "ergonomics",
+      "wellness"
     ],
     "exclude_kyc": true
+  },
+  "domain": {
+    "name": "Science Solved It",
+    "concept": "Science evidence-based solutions — anything where data, research, and engineering improve human performance, health, or daily life.",
+    "relevance_keywords": [
+      "red light therapy",
+      "cold plunge",
+      "ice bath",
+      "PEMF therapy",
+      "wearable health tracker",
+      "sauna benefits",
+      "biohacking devices",
+      "nootropics",
+      "sleep optimization",
+      "HRV monitoring",
+      "light therapy panel",
+      "cryotherapy",
+      "grounding mat",
+      "air purifier",
+      "water filter",
+      "ergonomic chair",
+      "standing desk",
+      "blue light blocking",
+      "sleep tracker",
+      "fitness tracker",
+      "smart ring",
+      "blood pressure monitor",
+      "continuous glucose monitor",
+      "supplements",
+      "vitamin d lamp",
+      "massage gun",
+      "foam roller",
+      "posture corrector"
+    ],
+    "min_relevance_score": 2,
+    "expansion_rule": "If the product solves a measurable human problem and has research/studies backing it, it fits. Creative freedom within 'science + solution.'"
+  },
+  "demand_research": {
+    "apify_actor": "TBD — user checking Apify Store",
+    "data_sources": ["Google Keyword Planner", "Ahrefs", "Apify Google Trends"],
+    "min_monthly_searches": 1000,
+    "competitor_overlap_threshold": 0.3
   },
   "publishing": {
     "output_dir": "../content/reviews",

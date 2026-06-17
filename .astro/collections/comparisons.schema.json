@@ -14,7 +14,34 @@
     "products": {
       "type": "array",
       "items": {
-        "type": "string"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "score": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "emoji": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        ]
       }
     },
     "winner": {

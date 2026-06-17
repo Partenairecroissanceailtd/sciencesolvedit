@@ -6,10 +6,10 @@ Creates tracking links and deeplinks via each network's API.
 from __future__ import annotations
 import logging
 from typing import Optional
-from .config import AffiliateOffer, load_config, logger
-from .networks.awin import AwinAdapter
-from .networks.partnerstack import PartnerStackAdapter
-from .networks.impact import ImpactAdapter
+from config import AffiliateOffer, load_config, logger
+from networks.awin import AwinAdapter
+from networks.partnerstack import PartnerStackAdapter
+from networks.impact import ImpactAdapter
 
 
 class LinkGenerator:

@@ -8,7 +8,7 @@ import logging, hashlib, time
 from typing import Optional
 import requests
 
-from ..config import AffiliateOffer, NetworkCredentials, logger
+from config import AffiliateOffer, NetworkCredentials, logger
 
 API_BASE = "https://api.impact.com"
 
