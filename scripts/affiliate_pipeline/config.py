@@ -21,7 +21,7 @@ logger = logging.getLogger("affiliate-pipeline")
 @dataclass
 class AffiliateOffer:
     """Normalized offer from any network."""
-    network: str                    # "awin" | "partnerstack" | "impact"
+    network: str                    # "awin" | "partnerstack" | "impact" | "manual"
     offer_id: str
     program_name: str
     advertiser: str

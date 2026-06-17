@@ -1,0 +1,3 @@
+network,offer_id,program_name,advertiser,description,category,price,commission_type,commission_value,cookie_days,tracking_link,deeplink,logo
+manual,1,Example Product Pro X,ExampleBrand,A short description of the product for the review meta.,red-light-therapy,499,percentage,10,30,https://example.com/?ref=yourlink,,
+manual,2,,,,cold-plunge,,fixed,25,90,,,
