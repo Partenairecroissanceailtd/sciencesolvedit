@@ -44,3 +44,23 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Ping IndexNow for instant indexing
+        run: |
+          curl -s -X POST "https://www.bing.com/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "www.sciencesolvedit.store",
+              "key": "de6f2892a78944ff9a96c5964e3e689f",
+              "keyLocation": "https://www.sciencesolvedit.store/de6f2892a78944ff9a96c5964e3e689f.txt",
+              "urlList": [
+                "https://www.sciencesolvedit.store/",
+                "https://www.sciencesolvedit.store/reviews/",
+                "https://www.sciencesolvedit.store/guides/",
+                "https://www.sciencesolvedit.store/comparisons/",
+                "https://www.sciencesolvedit.store/about/",
+                "https://www.sciencesolvedit.store/reviews/joovv-solo-30/",
+                "https://www.sciencesolvedit.store/guides/buying-red-light-panels/",
+                "https://www.sciencesolvedit.store/comparisons/whoop-vs-oura/"
+              ]
+            }'
