@@ -7,6 +7,17 @@ priceRange: "$150 - $7,000"
 publishedDate: 2026-06-01
 featured: true
 image: "/images/placeholder.png"
+bestPick: "PlatinumLED Biomax 900"
+affiliateUrl: "https://platinumtherapylights.com/products/biomax-900"
+faq:
+  - q: "How many watts do I need for red light therapy?"
+    a: "Total power output isn't the key metric — irradiance (mW/cm² at the treatment distance) matters more. Look for panels delivering 80-120 mW/cm² at 6 inches. Most quality panels are in the 150W-500W range."
+  - q: "Can I use red light therapy every day?"
+    a: "Yes, daily use is safe for most people. The clinical literature typically uses 3-5 sessions per week at 8-15 minutes per session. Listen to your skin — if you notice redness or irritation, reduce frequency."
+  - q: "What's the difference between red light (660nm) and near-infrared (850nm)?"
+    a: "660nm (red) penetrates 8-10mm for skin-level benefits like collagen production and wound healing. 850nm (near-infrared) penetrates 30-40mm for muscle recovery, joint health, and deep tissue benefits. Most quality panels include both."
+  - q: "Are expensive panels worth the extra cost?"
+    a: "Not always. Panels under $300 often use cheap LEDs with poor wavelength stability. The sweet spot is $500-$1,200, where you get verified irradiance specs, stable wavelengths, and adequate coverage. Above $2,000 you're paying for brand name and clinical certification."
 ---
 
 ## How to Choose a Red Light Therapy Panel

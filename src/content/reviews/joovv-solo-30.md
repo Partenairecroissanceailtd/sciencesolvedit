@@ -26,6 +26,15 @@ specs:
   Coverage: "12\" × 14\""
   Weight: "15.5 lbs"
   Warranty: "3 years"
+faq:
+  - q: "Is the Joovv Solo 3.0 worth the price?"
+    a: "It depends on your budget. The Joovv Solo 3.0 offers medical-grade irradiance and excellent build quality, but at $3,795 it's 3-4x the cost of comparable alternatives like the MitoPro 1500. For most people, the value proposition favors competitors unless budget is no object."
+  - q: "What wavelength is best for red light therapy?"
+    a: "The clinically validated sweet spot is 660nm (red) for surface-level benefits like skin health and 850nm (near-infrared) for deeper tissue penetration. The Joovv Solo 3.0 delivers both at therapeutic irradiance levels."
+  - q: "How long should I use the Joovv Solo 3.0 per session?"
+    a: "Joovv recommends 8-12 minutes per session at 6 inches, 3-5 times per week. Sessions longer than 20 minutes offer diminishing returns and may increase oxidative stress rather than reduce it."
+  - q: "Does red light therapy actually work?"
+    a: "Yes — multiple meta-analyses and randomized controlled trials support red light therapy for skin health, muscle recovery, and joint pain reduction. The mechanism (cytochrome c oxidase stimulation increasing ATP production) is well-established in the literature."
 ---
 
 ## Verdict
