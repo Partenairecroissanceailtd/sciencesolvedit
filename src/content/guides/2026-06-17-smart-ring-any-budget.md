@@ -14,7 +14,7 @@ Not everyone needs a $450 smart ring. Here's what each budget tier delivers.
 
 ## Budget: Under $100
 
-[**BIEMHA IP68 Smart Ring**](https://www.amazon.com/dp/B0GTQDXD2M?tag=sciencesolved-20) — ~$59
+[**BIEMHA IP68 Smart Ring**](https://www.amazon.com/dp/B0GTQDXD2M?tag=sciencesolved-20) [Check current price]
 - Heart rate, SpO2, sleep tracking
 - IP68 waterproof
 - No subscription
@@ -27,14 +27,14 @@ Not everyone needs a $450 smart ring. Here's what each budget tier delivers.
 
 ## Mid-Range: $200-$300
 
-[**RingConn Gen 2 Air**](https://www.amazon.com/dp/B0DWK135K9?tag=sciencesolved-20) — ~$249
+[**RingConn Gen 2 Air**](https://www.amazon.com/dp/B0DWK135K9?tag=sciencesolved-20) [Check current price]
 - 10-day battery (class-leading)
 - AI sleep and stress tracking
 - Ultra-thin design (2mm)
 - No subscription
 - Validated sleep tracking
 
-[**Amazfit Helio Ring**](https://www.amazon.com/dp/B0D5LPZHLB?tag=sciencesolved-20) — ~$299
+[**Amazfit Helio Ring**](https://www.amazon.com/dp/B0D5LPZHLB?tag=sciencesolved-20) [Check current price]
 - No subscription
 - 1.4-hour charging
 - Titanium alloy
@@ -47,7 +47,7 @@ Not everyone needs a $450 smart ring. Here's what each budget tier delivers.
 
 ## Premium: $400-$450
 
-[**Oura Ring 5**](https://www.amazon.com/dp/B0GRJVBPH3?tag=sciencesolved-20) — ~$449
+[**Oura Ring 5**](https://www.amazon.com/dp/B0GRJVBPH3?tag=sciencesolved-20) [Check current price]
 - Most validated sleep tracking (10+ studies)
 - AI Advisor
 - HRV correlation r=0.95 with ECG
@@ -71,7 +71,7 @@ Not everyone needs a $450 smart ring. Here's what each budget tier delivers.
 
 ## Our Bottom Line
 
-[**Amazfit Helio**](https://www.amazon.com/dp/B0D5LPZHLB?tag=sciencesolved-20) is the sweet spot — no subscription, solid features, $299.
+[**Amazfit Helio**](https://www.amazon.com/dp/B0D5LPZHLB?tag=sciencesolved-20) is the sweet spot — no subscription, solid features.
 [**Oura Ring 5**](https://www.amazon.com/dp/B0GRJVBPH3?tag=sciencesolved-20) if you want the best data.
 [**BIEMHA**](https://www.amazon.com/dp/B0GTQDXD2M?tag=sciencesolved-20) if you're just curious.
 
