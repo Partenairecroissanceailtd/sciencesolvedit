@@ -2,7 +2,7 @@
 title: "Weighted Blanket Science: What Research Says About Sleep & Anxiety"
 description: "An evidence-graded analysis of weighted blanket benefits — sleep quality, anxiety reduction, sensory processing, and safety. We rate each claim by the quality of published research."
 category: sleep-wellness
-products: 4
+# products: REMOVED — all weighted blankets sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: false
 image: "/images/weighted-blanket-science.jpg"

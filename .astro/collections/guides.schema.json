@@ -59,7 +59,6 @@
   "required": [
     "title",
     "description",
-    "category",
-    "products"
+    "category"
   ]
 }

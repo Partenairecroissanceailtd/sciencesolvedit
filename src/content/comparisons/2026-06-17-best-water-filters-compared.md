@@ -1,23 +1,11 @@
 ---
-title: "Best Water Filters Compared: Brita vs ZeroWater vs PUR (2026)"
-description: "We compared the top water filters head-to-head on contaminant removal, NSF certifications, filter lifespan, ongoing costs, and water quality. Pitcher, faucet, and countertop options."
+title: "Brita vs ZeroWater vs PUR — Which Filter Actually Removes the Most Lead and PFAS?"
+description: "We compared the top water filters head-to-head on contaminant removal, NSF certifications, filter lifespan, ongoing costs, and water quality. Note: All products are sub-$500; needs $500+ product refresh."
 category: health-monitoring
-products:
-  - name: "Brita Large 10-Cup Elite"
-    score: 90
-    url: "https://www.amazon.com/dp/B0B3GK9RW6?tag=sciencesolved-20"
-  - name: "ZeroWater 22-Cup Dispenser"
-    score: 88
-    url: "https://www.amazon.com/dp/B0BTFXPZK4?tag=sciencesolved-20"
-  - name: "Brita Standard Filter 3-Pack"
-    score: 82
-    url: "https://www.amazon.com/dp/B00004SU18?tag=sciencesolved-20"
-  - name: "Brita Slim 5-Cup Pitcher"
-    score: 75
-    url: "https://www.amazon.com/dp/B07F46P3WX?tag=sciencesolved-20"
+# products: REMOVED — all sub-$500 water filters
 publishedDate: 2026-06-17
 featured: true
-winner: "Brita Large 10-Cup Elite"
+# winner: REMOVED — sub-$500 product
 image: "/images/water-filter-comparison.jpg"
 ---
 

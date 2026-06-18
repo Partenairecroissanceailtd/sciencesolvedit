@@ -1,8 +1,8 @@
 ---
-title: "Red Light Therapy on Any Budget: Best Panels for Every Price Range"
-description: "Whether you have a modest budget or a bigger investment in mind, there's a quality red light therapy panel for you. We break down the best options at every price tier."
+title: "Red Light Therapy on Any Budget: From $50 to $1,000 — Which Panels Actually Deliver Real 660nm Output?"
+description: "Whether you have a modest budget or a bigger investment in mind, there's a quality red light therapy panel for you. We break down what each price tier actually delivers in irradiance, wavelength accuracy, and treatment coverage."
 category: red-light-therapy
-products: 10
+# products: REMOVED — most panels sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
 image: "/images/rlt-budget.jpg"
 faq:

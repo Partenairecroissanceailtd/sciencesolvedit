@@ -1,20 +1,11 @@
 ---
-title: "Infrared Sauna Blanket vs Traditional Sauna vs Steam Room: Which Is Right for You?"
-description: "Comparing infrared sauna blankets, traditional Finnish saunas, and steam rooms across cost, convenience, health benefits, and scientific evidence."
+title: "Infrared Sauna Blanket vs Traditional Sauna vs Steam Room — Which Delivers Better Cardiovascular Results?"
+description: "Comparing infrared sauna blankets, traditional Finnish saunas, and steam rooms across cost, convenience, health benefits, and scientific evidence. Note: Only HigherDOSE (~$599) meets $500+ threshold among blankets."
 category: sauna-blankets
 products:
   - name: "HigherDOSE Infrared Sauna Blanket"
     score: 92
     url: "https://www.amazon.com/dp/B0D9C9PQ8X?tag=sciencesolved-20"
-  - name: "MySauna XL"
-    score: 85
-    url: "https://www.amazon.com/dp/B0DXWBQ8YY?tag=sciencesolved-20"
-  - name: "LifePro RejuvaWrap"
-    score: 80
-    url: "https://www.amazon.com/dp/B0BX7HLCYQ?tag=sciencesolved-20"
-  - name: "Portable FIR Sleeveless"
-    score: 72
-    url: "https://www.amazon.com/dp/B0FVSY4G1W?tag=sciencesolved-20"
 publishedDate: 2026-06-17
 featured: false
 winner: "Infrared Sauna Blanket"

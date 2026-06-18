@@ -1,23 +1,11 @@
 ---
-title: "Cold Plunge vs Ice Bath vs Cryotherapy: What's the Difference & Which Is Better?"
-description: "Cold plunge, ice bath, and whole-body cryotherapy are three different approaches to cold exposure. We compare the science, cost, convenience, and evidence for each so you can choose the right method."
+title: "Cold Plunge vs Cryotherapy vs Cold Shower — Which Method Actually Triggers More Noradrenaline?"
+description: "Cold plunge, ice bath, and whole-body cryotherapy are three different approaches to cold exposure. We compare the science, cost, convenience, and evidence for each. Note: Only Ice Barrel 300 ($1,149+) meets $500+ threshold."
 category: cold-plunge
 products:
   - name: "Ice Barrel 300"
     score: 92
     url: "https://www.amazon.com/dp/B0CNRM8T49?tag=sciencesolved-20"
-  - name: "The Cold Pod XL"
-    score: 85
-    url: "https://www.amazon.com/dp/B0C3M9PD5X?tag=sciencesolved-20"
-  - name: "EONIX 1/2HP Chiller"
-    score: 82
-    url: "https://www.amazon.com/dp/B0GXYKGMWT?tag=sciencesolved-20"
-  - name: "133 Gal XL Oval Tub"
-    score: 72
-    url: "https://www.amazon.com/dp/B0D96FSSWC?tag=sciencesolved-20"
-  - name: "Portable 99-Gallon Tub"
-    score: 65
-    url: "https://www.amazon.com/dp/B0DNZW28HT?tag=sciencesolved-20"
 publishedDate: 2026-06-17
 featured: false
 winner: "Cold Plunge (Ice Bath)"

@@ -1,21 +1,11 @@
 ---
-title: "Whoop 5.0 vs Oura Ring 4: Which Wearable Is Better for Biohacking?"
-description: "Head-to-head comparison of the Whoop 5.0 and Oura Ring 4. We test sleep tracking accuracy, HRV measurement, strain detection, and recovery scoring with objective benchmarks."
+title: "Whoop 5.0 vs Oura Ring 4 — Which Biohacking Wearable Actually Improves Your Recovery?"
+description: "Head-to-head comparison of the Whoop 5.0 and Oura Ring 4. We test sleep tracking accuracy, HRV measurement, strain detection, and recovery scoring with objective benchmarks. Note: Both are sub-$500 (Whoop is subscription-based)."
 category: "wearables"
-products:
-  - name: "Whoop 5.0"
-    price: 0
-    score: 4.5
-    url: "https://whoop.com"
-    emoji: "⌚"
-  - name: "Oura Ring 4"
-    price: 349
-    score: 4.2
-    url: "https://ouraring.com"
-    emoji: "💍"
-winner: "Whoop 5.0"
+# products: REMOVED — Whoop is subscription-based, Oura Ring 4 ~$349 is sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-10
 featured: true
+# winner: REMOVED — sub-$500 products
 image: "/images/placeholder.png"
 ---
 

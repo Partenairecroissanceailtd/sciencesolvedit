@@ -1,10 +1,10 @@
 ---
-title: "The Science Behind Red Light Therapy for Hair Growth: Evidence, Mechanisms, and Clinical Applications"
+title: "15 Extra Hairs per Square Centimeter — Is Red Light Therapy the Hair Loss Treatment You Haven't Tried?"
 description: "A deep dive into the peer-reviewed research on photobiomodulation for androgenetic alopecia — what clinical trials show about hair regrowth, density improvements, and honest limitations."
 category: red-light-therapy
-products: 8
+# products: REMOVED — all sub-$500 hair growth devices; needs $500+ product refresh
 publishedDate: 2026-06-18
-bestPick: "DRTHEORY 162-Laser Hair Growth Device"
+# bestPick: REMOVED — DRTHEORY is sub-$500
 image: "/images/rlt-hair-science.jpg"
 faq:
   - q: "Does red light therapy actually regrow hair?"

@@ -2,7 +2,7 @@
 title: "Infrared Sauna Blanket Benefits: What Science Actually Says"
 description: "An evidence-graded analysis of infrared sauna blanket benefits — cardiovascular health, pain relief, detox, skin health, weight loss, and recovery. We rate each claim by the quality of published research."
 category: sauna-blankets
-products: 6
+# products: NOTE — HigherDOSE (~$599) is $500+, others sub-$500
 publishedDate: 2026-06-17
 featured: false
 image: "/images/sauna-blanket-science.jpg"

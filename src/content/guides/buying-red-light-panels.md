@@ -1,9 +1,9 @@
 ---
-title: "The Complete Buyer's Guide to Red Light Therapy Panels (2026)"
+title: "Should You Spend $299 or $3,795 on a Red Light Panel? Here's What the Specs Actually Tell You"
 description: "Everything you need to know before buying a red light therapy panel. Compare irradiance, wavelength accuracy, coverage area, and price across 12 top panels."
 category: "red-light-therapy"
-products: 12
-priceRange: "$150 - $7,000"
+# products: NOTE — PlatinumLED Biomax 900 ($1,099), Joovv Solo 3.0 ($3,795), MitoPro 1500 ($899) are $500+; Hooga HGPro 300 ($299), RedRush 360 ($249) are sub-$500
+# priceRange: REMOVED — includes sub-$500 products
 publishedDate: 2026-06-01
 featured: true
 image: "/images/placeholder.png"

@@ -2,7 +2,7 @@
 title: "Infrared Sauna Blanket on Any Budget: From $200 to $600"
 description: "Infrared sauna blankets range from $199 to $600+. We break down what each price tier delivers — heating technology, EMF safety, build quality, and how to choose the right one without overpaying."
 category: sauna-blankets
-products: 6
+# products: NOTE — HigherDOSE (~$599) is $500+, others sub-$500 need replacement
 publishedDate: 2026-06-17
 featured: false
 image: "/images/sauna-blanket-budget.jpg"

@@ -2,7 +2,7 @@
 title: "How to Use an Infrared Sauna Blanket: Science-Based Protocol for Maximum Benefits"
 description: "A step-by-step protocol for using your infrared sauna blanket — session timing, temperature settings, pre- and post-session routines, safety guidelines, and how to maximize cardiovascular, recovery, and relaxation benefits."
 category: sauna-blankets
-products: 4
+# products: NOTE — HigherDOSE (~$599) is $500+, MySauna XL sub-$500
 publishedDate: 2026-06-17
 featured: false
 image: "/images/sauna-blanket-protocol.jpg"

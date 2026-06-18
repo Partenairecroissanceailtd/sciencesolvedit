@@ -2,10 +2,10 @@
 title: "Blue Light Blocking Glasses: Do They Actually Improve Sleep? A Science-Backed Analysis"
 description: "Do blue light blocking glasses really work? A comprehensive review of the PubMed evidence — what the research says about sleep improvement, eye strain, and circadian health."
 category: eye-health
-products: 6
+# products: REMOVED — all products are sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: true
-bestPick: "TIJN Blue Light Sleep Glasses"
+# bestPick: REMOVED — sub-$500 product
 image: "/images/blue-light-guide.jpg"
 faq:
   - q: "Do blue light blocking glasses actually work?"

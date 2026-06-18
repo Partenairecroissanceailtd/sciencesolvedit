@@ -1,11 +1,11 @@
 ---
-title: "Cold Plunge Therapy: The Complete Science-Backed Guide (2026)"
-description: "Everything you need to know about cold plunge therapy — from the scientific evidence behind cold water immersion to practical protocols, safety guidelines, and product recommendations. Evidence-based, with PubMed-cited research."
+title: "Cold Water, 11 Minutes, 200% More Noradrenaline — Is Cold Plunge Therapy Worth the Hype?"
+description: "From muscle recovery to mood elevation to brown fat activation — we grade every cold plunge claim by the quality of published research and recommend the protocols that actually work."
 category: cold-plunge
-products: 10
+# products: NOTE — Ice Barrel 500 (~$500+) is the only $500+ option; all others sub-$500 need replacement
 publishedDate: 2026-06-17
 featured: true
-bestPick: "Ice Barrel 300"
+# bestPick: REMOVED — Ice Barrel 300 is sub-$500
 image: "/images/cold-plunge-guide.jpg"
 faq:
   - q: "Does cold plunge therapy actually work?"

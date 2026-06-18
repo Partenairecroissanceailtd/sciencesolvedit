@@ -36,7 +36,7 @@ const guides = defineCollection({
     title: z.string(),
     description: z.string(),
     category: z.string(),
-    products: z.number(),
+    products: z.number().optional(),
     priceRange: z.string().optional(),
     publishedDate: z.date().optional(),
     featured: z.boolean().optional().default(false),
@@ -68,7 +68,7 @@ const comparisons = defineCollection({
         url: z.string().optional(),
         emoji: z.string().optional(),
       })
-    ])),
+    ])).optional(),
     winner: z.string().optional(),
     publishedDate: z.date().optional(),
     featured: z.boolean().optional().default(false),

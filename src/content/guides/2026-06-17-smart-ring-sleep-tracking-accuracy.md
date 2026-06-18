@@ -2,7 +2,7 @@
 title: "Smart Ring Sleep Tracking: How Accurate Are Oura, Ultrahuman, and Amazfit?"
 description: "A deep dive into smart ring sleep tracking accuracy — what the validation studies actually show for Oura Ring, Ultrahuman, Amazfit Helio, and RingConn. Evidence-based analysis with PubMed references."
 category: wearables
-products: 4
+# products: REMOVED — all smart rings sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: false
 image: "/images/smart-ring-science.jpg"

@@ -1,11 +1,11 @@
 ---
-title: "The Complete Guide to Smart Rings in 2026: Sleep, Health & Fitness Tracking"
-description: "Everything you need to know about smart rings — how they track sleep, heart rate, HRV, and activity, which models are most accurate, and how to choose the right one. Evidence-based analysis with PubMed-cited research."
+title: "The Health Data You're Not Getting from Your Wrist — What a $449 Ring Reveals About Sleep"
+description: "How smart rings track sleep stages, HRV, heart rate, and body temperature from your finger. Evidence-based analysis with validation study data for Oura, Ultrahuman, Amazfit, and RingConn."
 category: wearables
-products: 6
+# products: REMOVED — all smart rings sub-$500 (Oura Ring 5 ~$449); needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: true
-bestPick: "Oura Ring 5"
+# bestPick: REMOVED — Oura Ring 5 is sub-$500
 image: "/images/smart-ring-guide.jpg"
 faq:
   - q: "Are smart rings accurate for sleep tracking?"

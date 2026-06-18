@@ -2,7 +2,7 @@
 title: "Cold Plunge on Any Budget: From $40 to $1,700 — What You Actually Get"
 description: "Cold plunge setups range from $40 inflatable tubs to $1,700 premium systems. We break down what each price tier actually delivers — and where your money is best spent for science-backed cold water immersion."
 category: cold-plunge
-products: 8
+# products: 8 — NOTE: Only Ice Barrel 500 is $500+; others sub-$500 need replacement
 publishedDate: 2026-06-17
 featured: false
 image: "/images/cold-plunge-budget.jpg"

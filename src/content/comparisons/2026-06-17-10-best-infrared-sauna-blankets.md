@@ -1,6 +1,6 @@
 ---
-title: "10 Best Infrared Sauna Blankets Compared (2026)"
-description: "We compared the top 10 infrared sauna blankets head-to-head across EMF levels, heat zones, temperature range, size, build quality, and price. From premium HigherDOSE to budget options — find the best sauna blanket for your needs."
+title: "HigherDOSE vs MySauna vs LifePro — Which $500+ Sauna Blanket Actually Delivers?"
+description: "We compared the top 10 infrared sauna blankets head-to-head across EMF levels, heat zones, temperature range, size, build quality, and price. Note: Only HigherDOSE models (~$599+) meet the $500+ threshold."
 category: sauna-blankets
 products:
   - name: "HigherDOSE Infrared Sauna Blanket"
@@ -9,24 +9,6 @@ products:
   - name: "HigherDOSE Detox & Glow Duo"
     score: 93
     url: "https://www.amazon.com/dp/B0FTJXQ9BZ?tag=sciencesolved-20"
-  - name: "MySauna XL"
-    score: 88
-    url: "https://www.amazon.com/dp/B0DXWBQ8YY?tag=sciencesolved-20"
-  - name: "LifePro RejuvaWrap"
-    score: 85
-    url: "https://www.amazon.com/dp/B0BX7HLCYQ?tag=sciencesolved-20"
-  - name: "Portable FIR Sauna Blanket (Sleeveless)"
-    score: 78
-    url: "https://www.amazon.com/dp/B0FVSY4G1W?tag=sciencesolved-20"
-  - name: "Upgraded Sauna Blanket w/ Remote"
-    score: 76
-    url: "https://www.amazon.com/dp/B0GCH9CPZC?tag=sciencesolved-20"
-  - name: "Full Body Sauna Blanket 86-176°F"
-    score: 74
-    url: "https://www.amazon.com/dp/B0G1WZV4NJ?tag=sciencesolved-20"
-  - name: "Infrared Sauna Blanket XL 6'5\""
-    score: 72
-    url: "https://www.amazon.com/dp/B0GK7DQ8TY?tag=sciencesolved-20"
 publishedDate: 2026-06-17
 featured: true
 winner: "HigherDOSE Infrared Sauna Blanket"

@@ -1,11 +1,11 @@
 ---
-title: "The Complete Guide to Weighted Blankets (2026)"
-description: "Everything you need to know about weighted blankets — how deep touch pressure stimulation works, the science behind sleep and anxiety benefits, weight selection guide, and the best products for every budget."
+title: "Your Brain on 15 Pounds of Pressure — Why a Weighted Blanket Tricks Your Nervous System into Calming Down"
+description: "How deep touch pressure stimulation works, what the RCTs actually show about sleep and anxiety improvement, and how to choose the right weight and material."
 category: sleep-wellness
-products: 8
+# products: REMOVED — all weighted blankets sub-$500 (Gravity ~$200); needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: true
-bestPick: "Gravity Blanket"
+# bestPick: REMOVED — sub-$500 product
 image: "/images/weighted-blanket-guide.jpg"
 faq:
   - q: "Do weighted blankets actually work?"

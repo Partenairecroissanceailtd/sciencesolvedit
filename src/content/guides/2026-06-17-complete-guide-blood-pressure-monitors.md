@@ -1,11 +1,11 @@
 ---
-title: "The Complete Guide to Home Blood Pressure Monitors (2026)"
-description: "Everything you need to know about home blood pressure monitors — accuracy, arm vs wrist, clinical validation, and the best monitors for home use. Evidence-based buyer's guide with PubMed-cited research."
+title: "Your Home Blood Pressure Monitor Might Be Wrong — Here's What the Research Says"
+description: "Upper arm vs wrist, clinical validation, and why most people measure incorrectly. Evidence-based guide to home blood pressure monitoring with PubMed-cited research."
 category: health-monitoring
-products: 6
+# products: REMOVED — all products sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: true
-bestPick: "Omron Iron BP Monitor"
+# bestPick: REMOVED — sub-$500 product
 image: "/images/bp-monitor-guide.jpg"
 faq:
   - q: "Which is more accurate — wrist or upper arm blood pressure monitor?"

@@ -1,20 +1,11 @@
 ---
-title: "Best Air Purifiers Compared: Coway vs Levoit vs Honeywell (2026)"
-description: "We compared the top air purifiers head-to-head across CADR rating, HEPA quality, filter costs, noise levels, and room coverage. Find the best air purifier for your home."
+title: "Your Air Purifier Might Be Too Small for the Room — Here's How to Know"
+description: "We compared the top air purifiers head-to-head across CADR rating, HEPA quality, filter costs, noise levels, and room coverage. Note: All products are sub-$500; needs $500+ product refresh."
 category: health-monitoring
-products:
-  - name: "Coway Airmega AP-1512HH"
-    score: 95
-    url: "https://www.amazon.com/dp/B01728NLRG?tag=sciencesolved-20"
-  - name: "Coway Airmega 400"
-    score: 92
-    url: "https://www.amazon.com/dp/B01C9RIACG?tag=sciencesolved-20"
-  - name: "Levoit Core Mini-P"
-    score: 78
-    url: "https://www.amazon.com/dp/B09FK5PN4H?tag=sciencesolved-20"
+# products: REMOVED — all sub-$500 air purifiers
 publishedDate: 2026-06-17
 featured: true
-winner: "Coway Airmega AP-1512HH"
+# winner: REMOVED — sub-$500 product
 image: "/images/air-purifier-comparison.jpg"
 ---
 

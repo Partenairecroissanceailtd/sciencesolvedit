@@ -1,28 +1,10 @@
 ---
-title: "Red Light Therapy Panel vs Mask: Which One Should You Choose?"
-description: "Red light therapy panels and face masks work differently. We compare panels and masks across coverage, convenience, evidence, and value to help you decide."
+title: "Red Light Panel vs Face Mask — If You Only Have $200, Which Form Factor Actually Delivers Better Results?"
+description: "Red light therapy panels and face masks work differently. We compare panels and masks across coverage, convenience, evidence, and value. Note: All products sub-$500; needs $500+ product refresh."
 category: red-light-therapy
-products:
-  - name: "Hooga HG300 (Panel)"
-    score: 95
-    url: "https://www.amazon.com/dp/B08Z761MHR?tag=sciencesolved-20"
-  - name: "Hooga HG200 (Panel)"
-    score: 88
-    url: "https://www.amazon.com/dp/B07T81R1DX?tag=sciencesolved-20"
-  - name: "4-Wavelength Panel"
-    score: 82
-    url: "https://www.amazon.com/dp/B0G6KDHKZ6?tag=sciencesolved-20"
-  - name: "FSA Curved Panel"
-    score: 78
-    url: "https://www.amazon.com/dp/B0GVZ4SWP3?tag=sciencesolved-20"
-  - name: "Smart 650W Panel"
-    score: 91
-    url: "https://www.amazon.com/dp/B0FM3YT23X?tag=sciencesolved-20"
-  - name: "Cordless Red Light Mask"
-    score: 75
-    url: "https://www.amazon.com/dp/B0GQKYDFS2?tag=sciencesolved-20"
-winner: "Hooga HG300 (Panel)"
+# products: REMOVED — all sub-$500 panels and masks
 publishedDate: 2026-06-17
+# winner: REMOVED — Hooga HG300 is sub-$500
 image: "/images/rlt-panel-vs-mask.jpg"
 ---
 

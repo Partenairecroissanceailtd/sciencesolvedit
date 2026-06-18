@@ -1,29 +1,11 @@
 ---
-title: "Best Blood Pressure Monitors Compared: Omron vs Withings vs A&D (2026)"
-description: "We compared the top home blood pressure monitors head-to-head — accuracy, clinical validation, ease of use, smart features, and value. Upper arm and wrist options included."
+title: "Your Blood Pressure Reading Might Be Wrong — Upper Arm vs Wrist, What the Validation Data Shows"
+description: "We compared the top home blood pressure monitors head-to-head — accuracy, clinical validation, ease of use, smart features, and value. Note: All products are sub-$500; needs $500+ product refresh."
 category: health-monitoring
-products:
-  - name: "Omron Iron BP Monitor"
-    score: 95
-    url: "https://www.amazon.com/dp/B0DN5ZMQ51?tag=sciencesolved-20"
-  - name: "A&D Medical UA-651"
-    score: 90
-    url: "https://www.amazon.com/dp/B00IWRRS6C?tag=sciencesolved-20"
-  - name: "Omron Gold Wireless Wrist"
-    score: 82
-    url: "https://www.amazon.com/dp/B07S2H45NN?tag=sciencesolved-20"
-  - name: "Oklar Upper Arm BP"
-    score: 80
-    url: "https://www.amazon.com/dp/B0CCXHL3JJ?tag=sciencesolved-20"
-  - name: "Oklar Wrist BP Monitor"
-    score: 72
-    url: "https://www.amazon.com/dp/B0CHXY8WQW?tag=sciencesolved-20"
-  - name: "Sinocare Upper Arm BP"
-    score: 75
-    url: "https://www.amazon.com/dp/B0FG79LB6M?tag=sciencesolved-20"
+# products: REMOVED — all sub-$500 blood pressure monitors
 publishedDate: 2026-06-17
 featured: true
-winner: "Omron Iron BP Monitor"
+# winner: REMOVED — sub-$500 product
 image: "/images/bp-monitor-comparison.jpg"
 ---
 

@@ -1,40 +1,10 @@
 ---
-title: "10 Best Red Light Therapy Panels in 2026 Compared"
-description: "We compared the top 10 red light therapy panels head-to-head across wavelength options, irradiance, coverage area, and price to help you find the best fit."
+title: "Hooga HG300 vs Smart 650W — Do $300 Red Light Panels Deliver Clinical-Grade Irradiance?"
+description: "We compared the top 10 red light therapy panels head-to-head across wavelength options, irradiance, coverage area, and price. Note: Most panels are sub-$500; needs $500+ product refresh."
 category: red-light-therapy
-products:
-  - name: "Hooga HG300"
-    score: 95
-    url: "https://www.amazon.com/dp/B08Z761MHR?tag=sciencesolved-20"
-  - name: "Hooga Pro300"
-    score: 93
-    url: "https://www.amazon.com/dp/B07WF9HNST?tag=sciencesolved-20"
-  - name: "Hooga Ultra 300"
-    score: 96
-    url: "https://www.amazon.com/dp/B0CGBSCQH7?tag=sciencesolved-20"
-  - name: "Smart 650W Panel"
-    score: 91
-    url: "https://www.amazon.com/dp/B0FM3YT23X?tag=sciencesolved-20"
-  - name: "Hooga HG200"
-    score: 88
-    url: "https://www.amazon.com/dp/B07T81R1DX?tag=sciencesolved-20"
-  - name: "4-Wavelength Panel"
-    score: 82
-    url: "https://www.amazon.com/dp/B0G6KDHKZ6?tag=sciencesolved-20"
-  - name: "70 Chip Mid-Range"
-    score: 80
-    url: "https://www.amazon.com/dp/B0F8NMRYKQ?tag=sciencesolved-20"
-  - name: "FSA Curved Panel"
-    score: 78
-    url: "https://www.amazon.com/dp/B0GVZ4SWP3?tag=sciencesolved-20"
-  - name: "Cordless Mask"
-    score: 75
-    url: "https://www.amazon.com/dp/B0GQKYDFS2?tag=sciencesolved-20"
-  - name: "Blue Light Wrap"
-    score: 72
-    url: "https://www.amazon.com/dp/B0BX7F9G28?tag=sciencesolved-20"
-winner: "Hooga Ultra 300"
+# products: REMOVED — all sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
+# winner: REMOVED — Hooga Ultra 300 is sub-$500
 image: "/images/rlt-comparison.jpg"
 ---
 

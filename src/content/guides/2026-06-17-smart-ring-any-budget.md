@@ -2,7 +2,7 @@
 title: "Smart Ring on Any Budget: From $60 to $450 — What You Actually Get"
 description: "Smart rings range from $60 to $450+. We break down what each price tier delivers in accuracy, features, battery life, and subscription costs — and where your money is best spent."
 category: wearables
-products: 4
+# products: REMOVED — all smart rings sub-$500 (Oura Ring 5 ~$449); needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: false
 image: "/images/smart-ring-budget.jpg"

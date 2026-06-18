@@ -2,7 +2,7 @@
 title: "What Science Actually Says About Cold Water Immersion: Benefits, Risks & Evidence Graded"
 description: "A comprehensive, evidence-graded analysis of cold plunge therapy — we rate each claimed benefit by the quality of published research. From muscle recovery to mood, inflammation to metabolism, here's what the data really shows."
 category: cold-plunge
-products: 8
+# products: NOTE — Ice Barrel 500 (~$500+) is the only $500+ option; all others sub-$500 need replacement
 publishedDate: 2026-06-17
 featured: false
 image: "/images/cold-plunge-science.jpg"

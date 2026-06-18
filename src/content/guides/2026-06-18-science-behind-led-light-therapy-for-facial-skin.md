@@ -1,10 +1,10 @@
 ---
-title: "The Science Behind LED Light Therapy for Facial Skin: Evidence, Mechanisms, and Clinical Applications"
+title: "Does Red Light Really Erase Wrinkles? What the RCTs on LED Face Masks Actually Found"
 description: "A deep dive into the peer-reviewed research on LED photobiomodulation for facial skin health — wrinkle reduction, collagen stimulation, acne treatment, and honest limitations of the current evidence."
 category: red-light-therapy
-products: 8
+# products: REMOVED — all LED masks/panels sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-18
-bestPick: "Shark CryoGlow LED Face Mask"
+# bestPick: REMOVED — Shark CryoGlow is sub-$500
 image: "/images/led-face-science.jpg"
 faq:
   - q: "Does LED light therapy really reduce wrinkles?"

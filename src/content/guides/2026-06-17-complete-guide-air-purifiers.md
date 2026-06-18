@@ -1,11 +1,11 @@
 ---
-title: "The Complete Guide to Home Air Purifiers (2026)"
-description: "Everything you need to know about home air purifiers — HEPA vs carbon filters, CADR ratings, room sizing, and the science of indoor air quality. Evidence-based buyer's guide with research citations."
+title: "Your Home Air Might Be Dirtier Than You Think — Can a $150 Purifier Actually Fix It?"
+description: "HEPA filters, CADR ratings, and the science of indoor air quality. We review what peer-reviewed research shows about air purifiers for allergies, sleep, and cardiovascular health."
 category: health-monitoring
-products: 6
+# products: REMOVED — all products sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: true
-bestPick: "Coway Airmega AP-1512HH"
+# bestPick: REMOVED — sub-$500 product
 image: "/images/air-purifier-guide.jpg"
 faq:
   - q: "Do air purifiers really make a difference?"

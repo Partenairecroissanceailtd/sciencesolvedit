@@ -1,10 +1,10 @@
 ---
-title: "The Science Behind Red Light Therapy: Evidence, Mechanisms, and Clinical Applications"
+title: "5,000 Studies, One Mechanism: How Red Light Triggers Your Cells to Repair Themselves"
 description: "A deep dive into the peer-reviewed research on red light therapy — how photobiomodulation works at the cellular level, what clinical studies show, and honest limitations of the current evidence."
 category: red-light-therapy
-products: 10
+# products: REMOVED — sub-$500 panels; needs $500+ product refresh
 publishedDate: 2026-06-17
-bestPick: "Hooga HG300"
+# bestPick: REMOVED — Hooga HG300 is sub-$500
 image: "/images/rlt-science.jpg"
 faq:
   - q: "Is red light therapy backed by real science?"

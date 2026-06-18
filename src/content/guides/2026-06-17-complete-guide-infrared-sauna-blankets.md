@@ -1,11 +1,11 @@
 ---
-title: "The Complete Guide to Infrared Sauna Blankets (2026)"
-description: "Everything you need to know about infrared sauna blankets — how they work, the science behind far infrared therapy, health benefits ranked by evidence, safety considerations, and the best products for every budget."
+title: "Sweat It Out: What 176°F of Far Infrared Heat Actually Does to Your Body"
+description: "Cardiovascular benefits, pain relief, detox claims, and recovery — an evidence-graded analysis of infrared sauna blanket therapy with practical protocols and product guidance."
 category: sauna-blankets
-products: 8
+# products: NOTE — HigherDOSE (~$500) is borderline $500+; others sub-$500 need replacement
 publishedDate: 2026-06-17
 featured: true
-bestPick: "HigherDOSE Infrared Sauna Blanket"
+# bestPick: HigherDOSE ~$500 — borderline-OK for $500+ rule
 image: "/images/sauna-blanket-guide.jpg"
 faq:
   - q: "Do infrared sauna blankets actually work?"

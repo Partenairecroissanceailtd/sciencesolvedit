@@ -1,6 +1,6 @@
 ---
-title: "10 Best Cold Plunge Tubs & Ice Bath Products Compared (2026)"
-description: "We compared the top 10 cold plunge products available on Amazon — from budget inflatable tubs to premium chiller systems. Evidence-based criteria, real specs, and honest recommendations."
+title: "Ice Barrel 300 vs Ice Barrel 500 — Which $1,000+ Cold Plunge Setup Is Right for You?"
+description: "We compared 10 cold plunge products from budget inflatables to premium chiller systems. Evidence-based criteria, real specs, and honest recommendations. Note: Only Ice Barrel 300, Ice Barrel 500, and Ice Cap meet the $500+ threshold."
 category: cold-plunge
 products:
   - name: "Ice Barrel 300"
@@ -12,27 +12,6 @@ products:
   - name: "Ice Cap Cold Plunge"
     score: 90
     url: "https://www.amazon.com/dp/B0GHLCG97K?tag=sciencesolved-20"
-  - name: "The Cold Pod XL"
-    score: 88
-    url: "https://www.amazon.com/dp/B0C3M9PD5X?tag=sciencesolved-20"
-  - name: "EONIX 1/2HP Chiller"
-    score: 85
-    url: "https://www.amazon.com/dp/B0GXYKGMWT?tag=sciencesolved-20"
-  - name: "216 Inflatable Tub w/ Lid"
-    score: 80
-    url: "https://www.amazon.com/dp/B0F99K5VM5?tag=sciencesolved-20"
-  - name: "Portable 99-Gallon Tub"
-    score: 72
-    url: "https://www.amazon.com/dp/B0DNZW28HT?tag=sciencesolved-20"
-  - name: "133 Gal XL Oval Tub"
-    score: 70
-    url: "https://www.amazon.com/dp/B0D96FSSWC?tag=sciencesolved-20"
-  - name: "Merapi XL Oval Tub"
-    score: 68
-    url: "https://www.amazon.com/dp/B0FK4XSWSD?tag=sciencesolved-20"
-  - name: "BINYUAN XL 99 Gal"
-    score: 65
-    url: "https://www.amazon.com/dp/B0CLPH3QC9?tag=sciencesolved-20"
 publishedDate: 2026-06-17
 featured: true
 winner: "Ice Barrel 300"
