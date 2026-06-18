@@ -6,7 +6,7 @@ category: wearables
 publishedDate: 2026-06-17
 featured: false
 # winner: REMOVED — Oura Ring 5 is sub-$500
-image: "/images/oura-vs-ultrahuman.jpg"
+image: "/images/og-oura-ring-vs-ultrahuman-vs-samsung--which-349-449-smart-ring.svg"
 ---
 
 The three smart ring brands that dominate the market — how do they compare?

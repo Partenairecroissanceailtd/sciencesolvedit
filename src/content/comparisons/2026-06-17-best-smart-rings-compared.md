@@ -6,7 +6,7 @@ category: wearables
 publishedDate: 2026-06-17
 featured: true
 # winner: REMOVED — Oura Ring 5 is sub-$500
-image: "/images/smart-ring-comparison.jpg"
+image: "/images/og-oura-ring-5-vs-ultrahuman-vs-amazfit--are-any-of-these-300-4.svg"
 ---
 
 Smart rings have become the biohacker's preferred wearable for sleep and recovery tracking. Here's how the top models stack up.

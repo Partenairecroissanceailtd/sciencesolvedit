@@ -5,7 +5,7 @@ category: red-light-therapy
 # products: REMOVED — all sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
 # winner: REMOVED — Hooga Ultra 300 is sub-$500
-image: "/images/rlt-comparison.jpg"
+image: "/images/og-hooga-hg300-vs-smart-650w--do-300-red-light-panels-deliver-c.svg"
 ---
 
 ## 10 Best Red Light Therapy Panels Compared Head-to-Head

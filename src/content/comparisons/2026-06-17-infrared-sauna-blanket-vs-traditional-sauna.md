@@ -9,7 +9,7 @@ products:
 publishedDate: 2026-06-17
 featured: false
 winner: "Infrared Sauna Blanket"
-image: "/images/sauna-comparison.jpg"
+image: "/images/og-infrared-sauna-blanket-vs-traditional-sauna-vs-steam-room--w.svg"
 ---
 
 Three heat therapy modalities — which delivers the best results for your goals?

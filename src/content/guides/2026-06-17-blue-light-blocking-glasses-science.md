@@ -6,7 +6,7 @@ category: eye-health
 publishedDate: 2026-06-17
 featured: true
 # bestPick: REMOVED — sub-$500 product
-image: "/images/blue-light-guide.jpg"
+image: "/images/og-blue-light-blocking-glasses-do-they-actually-improve-sleep-a.svg"
 faq:
   - q: "Do blue light blocking glasses actually work?"
     a: "For sleep improvement, yes — multiple RCTs show that wearing blue-blocking glasses 1-2 hours before bed improves sleep onset and quality. For eye strain, the evidence is mixed — a 2020 meta-analysis found minimal objective benefit over placebo."

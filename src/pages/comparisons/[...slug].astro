@@ -17,7 +17,9 @@ const slug = id.replace('comparisons/', '');
 const siteUrl = 'https://sciencesolvedit.store';
 const pubDate = entry.data.publishedDate?.toISOString?.() || entry.data.publishedDate;
 const modDate = entry.data.updatedDate?.toISOString?.() || entry.data.updatedDate || pubDate;
-const ogImage = `${siteUrl}/images/og-default.png`;
+const ogImage = entry.data.image 
+  ? `${siteUrl}${entry.data.image}`
+  : `${siteUrl}/images/og-default.png`;
 const authorName = 'Science Solved It Research Team';
 const siteName = 'Science Solved It';
 ---

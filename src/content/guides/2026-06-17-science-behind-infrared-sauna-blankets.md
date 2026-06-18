@@ -5,7 +5,7 @@ category: sauna-blankets
 # products: NOTE — HigherDOSE (~$599) is $500+, others sub-$500
 publishedDate: 2026-06-17
 featured: false
-image: "/images/sauna-blanket-science.jpg"
+image: "/images/og-infrared-sauna-blanket-benefits-what-science-actually-says.svg"
 ---
 
 Infrared sauna blankets are one of the fastest-growing biohacking tools — but which benefits are backed by real science? We reviewed the PubMed literature and graded each claim.

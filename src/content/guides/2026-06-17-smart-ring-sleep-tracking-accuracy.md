@@ -5,7 +5,7 @@ category: wearables
 # products: REMOVED — all smart rings sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: false
-image: "/images/smart-ring-science.jpg"
+image: "/images/og-smart-ring-sleep-tracking-how-accurate-are-oura-ultrahuman-a.svg"
 ---
 
 Sleep tracking is the #1 reason people buy smart rings. But how accurate are they really?

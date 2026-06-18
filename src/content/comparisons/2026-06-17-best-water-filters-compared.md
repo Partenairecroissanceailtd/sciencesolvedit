@@ -6,7 +6,7 @@ category: health-monitoring
 publishedDate: 2026-06-17
 featured: true
 # winner: REMOVED — sub-$500 product
-image: "/images/water-filter-comparison.jpg"
+image: "/images/og-brita-vs-zerowater-vs-pur--which-filter-actually-removes-the.svg"
 ---
 
 ## Quick Comparison

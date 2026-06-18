@@ -5,7 +5,7 @@ category: red-light-therapy
 # products: REMOVED — sub-$500 panels; needs $500+ product refresh
 publishedDate: 2026-06-17
 # bestPick: REMOVED — Hooga HG300 is sub-$500
-image: "/images/rlt-science.jpg"
+image: "/images/og-5000-studies-one-mechanism-how-red-light-triggers-your-cells.svg"
 faq:
   - q: "Is red light therapy backed by real science?"
     a: "Yes. Over 5,000 peer-reviewed studies have been published on photobiomodulation, including multiple systematic reviews and meta-analyses. The strongest evidence exists for wound healing, inflammation reduction, and pain management."

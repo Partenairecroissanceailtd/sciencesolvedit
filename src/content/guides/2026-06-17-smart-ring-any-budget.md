@@ -5,7 +5,7 @@ category: wearables
 # products: REMOVED — all smart rings sub-$500 (Oura Ring 5 ~$449); needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: false
-image: "/images/smart-ring-budget.jpg"
+image: "/images/og-smart-ring-on-any-budget-from-60-to-450--what-you-actually-g.svg"
 ---
 
 Not everyone needs a $450 smart ring. Here's what each budget tier delivers.

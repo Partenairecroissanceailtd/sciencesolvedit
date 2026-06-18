@@ -4,7 +4,7 @@ description: "Whether you have a modest budget or a bigger investment in mind, t
 category: red-light-therapy
 # products: REMOVED — most panels sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
-image: "/images/rlt-budget.jpg"
+image: "/images/og-red-light-therapy-on-any-budget-from-50-to-1000--which-panel.svg"
 faq:
   - q: "Can affordable red light therapy panels work?"
     a: "Some budget panels deliver therapeutic irradiance, but many don't. The 4-Wavelength Panel offers genuine 660/850nm output, but cheaper units often use underpowered LEDs. Check independent reviews and verified specs before buying."

@@ -6,7 +6,7 @@ category: red-light-therapy
 publishedDate: 2026-06-17
 featured: true
 # bestPick: REMOVED — Hooga HG300 is sub-$500
-image: "/images/red-light-therapy-guide.jpg"
+image: "/images/og-your-mitochondria-are-starving-for-light--what-20-minutes-of.svg"
 faq:
   - q: "Do red light therapy panels really work?"
     a: "Yes. A 2023 systematic review in Photobiomodulation, Photomedicine, and Laser Surgery found that red light therapy significantly reduces inflammation and promotes tissue repair. The mechanism is well-established: mitochondria absorb red/near-infrared light, increasing ATP production."

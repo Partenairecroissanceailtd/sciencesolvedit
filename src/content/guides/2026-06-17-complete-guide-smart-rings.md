@@ -6,7 +6,7 @@ category: wearables
 publishedDate: 2026-06-17
 featured: true
 # bestPick: REMOVED — Oura Ring 5 is sub-$500
-image: "/images/smart-ring-guide.jpg"
+image: "/images/og-the-health-data-youre-not-getting-from-your-wrist--what-a-44.svg"
 faq:
   - q: "Are smart rings accurate for sleep tracking?"
     a: "Yes — multiple validation studies show Oura Ring has >85% epoch-by-epoch agreement with polysomnography (PSG), the gold standard for sleep staging. A 2023 study in Sleep found Oura's sleep architecture detection rivals clinical-grade devices."

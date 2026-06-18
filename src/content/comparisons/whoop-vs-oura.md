@@ -6,7 +6,7 @@ category: "wearables"
 publishedDate: 2026-06-10
 featured: true
 # winner: REMOVED — sub-$500 products
-image: "/images/placeholder.png"
+image: "/images/og-whoop-50-vs-oura-ring-4--which-biohacking-wearable-actually.svg"
 ---
 
 ## The Short Answer

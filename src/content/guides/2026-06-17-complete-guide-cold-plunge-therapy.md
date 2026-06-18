@@ -6,7 +6,7 @@ category: cold-plunge
 publishedDate: 2026-06-17
 featured: true
 # bestPick: REMOVED — Ice Barrel 300 is sub-$500
-image: "/images/cold-plunge-guide.jpg"
+image: "/images/og-cold-water-11-minutes-200-more-noradrenaline--is-cold-plunge.svg"
 faq:
   - q: "Does cold plunge therapy actually work?"
     a: "Yes — multiple systematic reviews confirm cold water immersion reduces muscle soreness, improves perceived recovery, and acutely boosts alertness via noradrenaline elevation. A 2016 meta-analysis of 21 RCTs (Machado et al.) found CWI significantly reduced delayed onset muscle soreness at 24-72 hours post-exercise."

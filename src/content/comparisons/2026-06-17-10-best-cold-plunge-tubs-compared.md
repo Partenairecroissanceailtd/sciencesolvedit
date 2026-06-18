@@ -15,7 +15,7 @@ products:
 publishedDate: 2026-06-17
 featured: true
 winner: "Ice Barrel 300"
-image: "/images/cold-plunge-comparison.jpg"
+image: "/images/og-ice-barrel-300-vs-ice-barrel-500--which-1000-cold-plunge-set.svg"
 ---
 
 Whether you're a professional athlete looking for faster recovery or a biohacker exploring cold exposure, choosing the right cold plunge setup can be overwhelming. Prices range from **$40 to over $1,700**, and features vary wildly.

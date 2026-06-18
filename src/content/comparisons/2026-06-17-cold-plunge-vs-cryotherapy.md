@@ -9,7 +9,7 @@ products:
 publishedDate: 2026-06-17
 featured: false
 winner: "Cold Plunge (Ice Bath)"
-image: "/images/cold-plunge-vs-cryo.jpg"
+image: "/images/og-cold-plunge-vs-cryotherapy-vs-cold-shower--which-method-actu.svg"
 ---
 
 Cold exposure therapy comes in three main forms: **cold plunge (ice baths)**, **whole-body cryotherapy (WBC)** , and **cold showers**. While all involve exposing the body to cold, the mechanisms, evidence, and practical considerations differ significantly.

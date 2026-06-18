@@ -5,7 +5,7 @@ category: sauna-blankets
 # products: NOTE — HigherDOSE (~$599) is $500+, others sub-$500 need replacement
 publishedDate: 2026-06-17
 featured: false
-image: "/images/sauna-blanket-budget.jpg"
+image: "/images/og-infrared-sauna-blanket-on-any-budget-from-200-to-600.svg"
 ---
 
 Infrared sauna blankets span a wide price range. Here's what each tier actually gets you.

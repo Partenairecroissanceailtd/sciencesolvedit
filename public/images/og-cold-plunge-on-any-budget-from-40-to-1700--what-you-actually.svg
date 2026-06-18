@@ -1,0 +1,20 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1a" />
+      <stop offset="100%" stop-color="#0f1628" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <rect x="0" y="0" width="1200" height="5" fill="#3b82f6" />
+  <rect x="500" y="80" width="200" height="32" rx="16" fill="#1e2a3e" />
+  <text x="600" y="96" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#3b82f6" text-anchor="middle" dominant-baseline="middle">COLD PLUNGE</text>
+  <text x="600" y="130" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#3b82f6" text-anchor="middle" letter-spacing="3">BUYER&#39;S GUIDE</text>
+<text x="600" y="200" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#fff" text-anchor="middle">Cold Plunge on Any Budget: From $40</text>
+<text x="600" y="248" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#fff" text-anchor="middle">to $1,700 — What You Actually Get</text>
+  <line x1="540" y1="380" x2="660" y2="380" stroke="#3b82f6" stroke-width="2" opacity="0.3" />
+  <rect x="300" y="420" width="600" height="100" rx="12" fill="#1a2332" />
+<text x="500" y="420" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#3b82f6" text-anchor="end">8</text><text x="510" y="420" font-family="Inter, Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="start" dominant-baseline="middle">Products Compared</text>
+  <text x="600" y="590" font-family="Inter, Arial, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">Science Solved It</text>
+  <rect x="0" y="670" width="1200" height="5" fill="#3b82f6" />
+</svg>

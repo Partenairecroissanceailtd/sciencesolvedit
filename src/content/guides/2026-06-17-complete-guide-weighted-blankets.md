@@ -6,7 +6,7 @@ category: sleep-wellness
 publishedDate: 2026-06-17
 featured: true
 # bestPick: REMOVED — sub-$500 product
-image: "/images/weighted-blanket-guide.jpg"
+image: "/images/og-your-brain-on-15-pounds-of-pressure--why-a-weighted-blanket.svg"
 faq:
   - q: "Do weighted blankets actually work?"
     a: "Yes — a 2020 RCT in the Journal of Clinical Sleep Medicine found that weighted blankets significantly improved sleep quality and reduced pre-sleep arousal in adults with insomnia. A 2024 meta-analysis of 8 RCTs confirmed moderate effects for anxiety reduction (Hedges' g=0.45)."

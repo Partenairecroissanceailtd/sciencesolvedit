@@ -5,7 +5,7 @@ category: red-light-therapy
 # products: REMOVED — all sub-$500 panels and masks
 publishedDate: 2026-06-17
 # winner: REMOVED — Hooga HG300 is sub-$500
-image: "/images/rlt-panel-vs-mask.jpg"
+image: "/images/og-red-light-panel-vs-face-mask--if-you-only-have-200-which-for.svg"
 ---
 
 ## Red Light Therapy Panel vs Mask: Which is Right for You?

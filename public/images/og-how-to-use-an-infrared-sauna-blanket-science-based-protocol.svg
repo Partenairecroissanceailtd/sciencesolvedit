@@ -1,0 +1,19 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1a" />
+      <stop offset="100%" stop-color="#0f1628" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <rect x="0" y="0" width="1200" height="5" fill="#3b82f6" />
+  <text x="600" y="60" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#3b82f6" text-anchor="middle" letter-spacing="3">EVIDENCE-BASED ANALYSIS</text>
+  <line x1="550" y1="80" x2="650" y2="80" stroke="#3b82f6" stroke-width="2" opacity="0.3" />
+  <rect x="450" y="110" width="300" height="32" rx="16" fill="#1e2a3e" />
+  <text x="600" y="126" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#3b82f6" text-anchor="middle" dominant-baseline="middle">SAUNA BLANKETS</text>
+<text x="600" y="260" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700" fill="#fff" text-anchor="middle">How to Use an Infrared Sauna Blanket:</text>
+<text x="600" y="312" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700" fill="#fff" text-anchor="middle">Science-Based Protocol for Maximum</text>
+<text x="600" y="364" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700" fill="#fff" text-anchor="middle">Benefits</text>
+  <text x="600" y="510" font-family="Inter, Arial, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">Science Solved It · Science-Backed Research</text>
+  <rect x="0" y="670" width="1200" height="5" fill="#3b82f6" />
+</svg>

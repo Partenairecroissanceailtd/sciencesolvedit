@@ -5,7 +5,7 @@ category: cold-plunge
 # products: NOTE — Ice Barrel 500 (~$500+) is the only $500+ option; all others sub-$500 need replacement
 publishedDate: 2026-06-17
 featured: false
-image: "/images/cold-plunge-science.jpg"
+image: "/images/og-what-science-actually-says-about-cold-water-immersion-benefi.svg"
 ---
 
 If you've spent any time in the biohacking space, you've heard the claims: cold plunging boosts recovery, burns fat, strengthens immunity, sharpens focus, and extends longevity. But how many of these claims hold up to scientific scrutiny?

@@ -5,7 +5,7 @@ category: red-light-therapy
 # products: REMOVED — all LED masks/panels sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-18
 # bestPick: REMOVED — Shark CryoGlow is sub-$500
-image: "/images/led-face-science.jpg"
+image: "/images/og-does-red-light-really-erase-wrinkles-what-the-rcts-on-led-fa.svg"
 faq:
   - q: "Does LED light therapy really reduce wrinkles?"
     a: "Yes — a 2023 split-face RCT of 137 women found that 660nm red light therapy at 3.8 J/cm² over 10 sessions produced approximately a 30% reduction in periocular wrinkle volume. A 2025 multi-center RCT showed an 86.2% improvement rate in crow's feet with a home-use LED mask."

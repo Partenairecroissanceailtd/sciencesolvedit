@@ -5,7 +5,7 @@ category: sauna-blankets
 # products: NOTE — HigherDOSE (~$599) is $500+, MySauna XL sub-$500
 publishedDate: 2026-06-17
 featured: false
-image: "/images/sauna-blanket-protocol.jpg"
+image: "/images/og-how-to-use-an-infrared-sauna-blanket-science-based-protocol.svg"
 ---
 
 Getting the most out of your infrared sauna blanket requires more than just lying down and turning it on. Based on the research, here's the optimal protocol.

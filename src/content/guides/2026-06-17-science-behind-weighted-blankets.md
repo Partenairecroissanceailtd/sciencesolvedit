@@ -5,7 +5,7 @@ category: sleep-wellness
 # products: REMOVED — all weighted blankets sub-$500; needs $500+ product refresh
 publishedDate: 2026-06-17
 featured: false
-image: "/images/weighted-blanket-science.jpg"
+image: "/images/og-weighted-blanket-science-what-research-says-about-sleep--anx.svg"
 ---
 
 Weighted blankets are one of the most popular sleep wellness products. But which benefits are backed by real science?

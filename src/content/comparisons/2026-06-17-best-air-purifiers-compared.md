@@ -6,7 +6,7 @@ category: health-monitoring
 publishedDate: 2026-06-17
 featured: true
 # winner: REMOVED — sub-$500 product
-image: "/images/air-purifier-comparison.jpg"
+image: "/images/og-your-air-purifier-might-be-too-small-for-the-room--heres-how.svg"
 ---
 
 ## Quick Comparison

@@ -6,7 +6,7 @@ category: health-monitoring
 publishedDate: 2026-06-17
 featured: true
 # winner: REMOVED — sub-$500 product
-image: "/images/bp-monitor-comparison.jpg"
+image: "/images/og-your-blood-pressure-reading-might-be-wrong--upper-arm-vs-wri.svg"
 ---
 
 Home blood pressure monitoring is recommended by every major health organization. Here are the best validated monitors available.

@@ -6,7 +6,7 @@ category: health-monitoring
 publishedDate: 2026-06-17
 featured: true
 # bestPick: REMOVED — sub-$500 product
-image: "/images/air-purifier-guide.jpg"
+image: "/images/og-your-home-air-might-be-dirtier-than-you-think--can-a-150-pur.svg"
 faq:
   - q: "Do air purifiers really make a difference?"
     a: "Yes — a 2019 systematic review in the Journal of Allergy and Clinical Immunology found that HEPA air purifiers significantly reduced indoor PM2.5 levels and improved allergic rhinitis symptoms. Multiple studies also show cardiovascular benefits from reduced particulate exposure."

@@ -6,7 +6,7 @@ category: sauna-blankets
 publishedDate: 2026-06-17
 featured: true
 # bestPick: HigherDOSE ~$500 — borderline-OK for $500+ rule
-image: "/images/sauna-blanket-guide.jpg"
+image: "/images/og-sweat-it-out-what-176f-of-far-infrared-heat-actually-does-to.svg"
 faq:
   - q: "Do infrared sauna blankets actually work?"
     a: "Yes — a 2018 systematic review in the Journal of Clinical Medicine found that infrared sauna therapy significantly improves cardiovascular function, reduces chronic pain, and supports detoxification pathways. The far infrared wavelengths penetrate 1-2 inches into tissue, raising core body temperature and inducing a therapeutic sweat."

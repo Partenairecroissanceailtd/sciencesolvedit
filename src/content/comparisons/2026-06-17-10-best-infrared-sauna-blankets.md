@@ -12,7 +12,7 @@ products:
 publishedDate: 2026-06-17
 featured: true
 winner: "HigherDOSE Infrared Sauna Blanket"
-image: "/images/sauna-blanket-comparison.jpg"
+image: "/images/og-higherdose-vs-mysauna-vs-lifepro--which-500-sauna-blanket-ac.svg"
 ---
 
 We evaluated the top infrared sauna blankets based on: heating technology, EMF levels, temperature range, size/fit, build materials, timer options, temperature control precision, and verified customer reviews.

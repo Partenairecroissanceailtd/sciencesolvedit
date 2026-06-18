@@ -6,7 +6,7 @@ category: "red-light-therapy"
 # priceRange: REMOVED — includes sub-$500 products
 publishedDate: 2026-06-01
 featured: true
-image: "/images/placeholder.png"
+image: "/images/og-should-you-spend-299-or-3795-on-a-red-light-panel-heres-what.svg"
 bestPick: "PlatinumLED Biomax 900"
 affiliateUrl: "https://platinumtherapylights.com/products/biomax-900"
 faq:
