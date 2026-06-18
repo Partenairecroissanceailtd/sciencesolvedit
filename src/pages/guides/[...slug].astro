@@ -15,13 +15,22 @@ const entry = await getEntry('guides', id);
 const { Content } = await render(entry);
 const slug = id.replace('guides/', '');
 const hasFaq = entry.data.faq && entry.data.faq.length > 0;
+const siteUrl = 'https://sciencesolvedit.store';
+const pubDate = entry.data.publishedDate?.toISOString?.() || entry.data.publishedDate;
+const modDate = entry.data.updatedDate?.toISOString?.() || entry.data.updatedDate || pubDate;
+const ogImage = entry.data.image 
+  ? `${siteUrl}${entry.data.image}`
+  : `${siteUrl}/images/og-default.png`;
+const authorName = 'Science Solved It Research Team';
+const siteName = 'Science Solved It';
 ---
 
 <BaseLayout
   title={`${entry.data.title} — Science Solved It`}
   description={entry.data.description}
   type="article"
-  publishedTime={entry.data.publishedDate?.toISOString()}
+  publishedTime={pubDate}
+  image={ogImage}
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Guides', url: '/guides/' },
@@ -29,10 +38,31 @@ const hasFaq = entry.data.faq && entry.data.faq.length > 0;
   ]}
   jsonLd={{
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "NewsArticle",
     "headline": entry.data.title,
     "description": entry.data.description,
-    "datePublished": entry.data.publishedDate?.toISOString()
+    "datePublished": pubDate,
+    "dateModified": modDate,
+    "author": {
+      "@type": "Organization",
+      "name": authorName,
+      "url": `${siteUrl}/about/`
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": siteName,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/images/logo.png`
+      }
+    },
+    "image": ogImage,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/guides/${slug}/`
+    },
+    "articleSection": (entry.data.category || '').replace(/-/g, ' '),
+    "isAccessibleForFree": true
   }}
 >
   <article class="container-narrow" style="padding:2rem 0">

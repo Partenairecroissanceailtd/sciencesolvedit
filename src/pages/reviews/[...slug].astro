@@ -15,13 +15,22 @@ const entry = await getEntry('reviews', id);
 const { Content } = await render(entry);
 const slug = id.replace('reviews/', '');
 const hasFaq = entry.data.faq && entry.data.faq.length > 0;
+const siteUrl = 'https://sciencesolvedit.store';
+const pubDate = entry.data.publishedDate?.toISOString?.() || entry.data.publishedDate;
+const modDate = entry.data.updatedDate?.toISOString?.() || entry.data.updatedDate || pubDate;
+const ogImage = entry.data.image 
+  ? `${siteUrl}${entry.data.image}`
+  : `${siteUrl}/images/og-default.png`;
+const authorName = 'Science Solved It Research Team';
+const siteName = 'Science Solved It';
 ---
 
 <BaseLayout
   title={`${entry.data.title} — Science Solved It`}
   description={entry.data.description}
   type="article"
-  publishedTime={entry.data.publishedDate?.toISOString()}
+  publishedTime={pubDate}
+  image={ogImage}
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Reviews', url: '/reviews/' },
@@ -29,29 +38,31 @@ const hasFaq = entry.data.faq && entry.data.faq.length > 0;
   ]}
   jsonLd={{
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": entry.data.title,
+    "@type": "NewsArticle",
+    "headline": entry.data.title,
     "description": entry.data.description,
-    "brand": { "@type": "Brand", "name": entry.data.brand || "Unknown" },
-    "offers": {
-      "@type": "Offer",
-      "price": entry.data.price,
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "url": entry.data.affiliateUrl || undefined
+    "datePublished": pubDate,
+    "dateModified": modDate,
+    "author": {
+      "@type": "Organization",
+      "name": authorName,
+      "url": `${siteUrl}/about/`
     },
-    "review": {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": entry.data.rating,
-        "bestRating": 5
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Science Solved It"
+    "publisher": {
+      "@type": "Organization",
+      "name": siteName,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/images/logo.png`
       }
-    }
+    },
+    "image": ogImage,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/reviews/${slug}/`
+    },
+    "articleSection": (entry.data.category || '').replace(/-/g, ' '),
+    "isAccessibleForFree": true
   }}
 >
   <article class="container-narrow" style="padding:2rem 0">
