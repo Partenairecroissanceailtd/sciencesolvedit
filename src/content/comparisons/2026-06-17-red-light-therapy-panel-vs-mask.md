@@ -2,10 +2,21 @@
 title: "Red Light Panel vs Face Mask — If You Only Have $200, Which Form Factor Actually Delivers Better Results?"
 description: "Red light therapy panels and face masks work differently. We compare panels and masks across coverage, convenience, evidence, and value. Note: All products sub-$500; needs $500+ product refresh."
 category: red-light-therapy
-# products: REMOVED — all sub-$500 panels and masks
+
 publishedDate: 2026-06-17
-# winner: REMOVED — Hooga HG300 is sub-$500
+
 image: "/images/og-red-light-panel-vs-face-mask--if-you-only-have-200-which-for.svg"
+products:
+  - name: "Hooga HG300 (Panel)"
+    score: 95
+    url: "https://www.amazon.com/dp/B08Z761MHR?tag=sciencesolved-20"
+  - name: "Hooga Pro300 (Panel)"
+    score: 93
+    url: "https://www.amazon.com/dp/B07WF9HNST?tag=sciencesolved-20"
+  - name: "Hooga HG200 (Panel)"
+    score: 88
+    url: "https://www.amazon.com/dp/B07T81R1DX?tag=sciencesolved-20"
+winner: "Hooga HG300 (Panel)"
 ---
 
 ## Red Light Therapy Panel vs Mask: Which is Right for You?

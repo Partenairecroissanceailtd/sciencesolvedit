@@ -6,6 +6,7 @@ category: sauna-blankets
 publishedDate: 2026-06-17
 featured: false
 image: "/images/og-infrared-sauna-blanket-on-any-budget-from-200-to-600.svg"
+bestPick: "HigherDOSE Infrared Sauna Blanket"
 ---
 
 Infrared sauna blankets span a wide price range. Here's what each tier actually gets you.

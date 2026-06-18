@@ -2,9 +2,11 @@
 title: "Red Light Therapy on Any Budget: From $50 to $1,000 — Which Panels Actually Deliver Real 660nm Output?"
 description: "Whether you have a modest budget or a bigger investment in mind, there's a quality red light therapy panel for you. We break down what each price tier actually delivers in irradiance, wavelength accuracy, and treatment coverage."
 category: red-light-therapy
-# products: REMOVED — most panels sub-$500; needs $500+ product refresh
+
 publishedDate: 2026-06-17
 image: "/images/og-red-light-therapy-on-any-budget-from-50-to-1000--which-panel.svg"
+products: 4
+bestPick: "Hooga HG300"
 faq:
   - q: "Can affordable red light therapy panels work?"
     a: "Some budget panels deliver therapeutic irradiance, but many don't. The 4-Wavelength Panel offers genuine 660/850nm output, but cheaper units often use underpowered LEDs. Check independent reviews and verified specs before buying."

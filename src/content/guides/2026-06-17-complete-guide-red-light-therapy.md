@@ -2,11 +2,13 @@
 title: "Your Mitochondria Are Starving for Light — What 20 Minutes of Red Light Therapy Actually Does"
 description: "Photobiomodulation explained: how 660nm and 850nm light triggers ATP production, reduces inflammation, and supports healing. Evidence-graded analysis of red light therapy panels."
 category: red-light-therapy
-# products: REMOVED — most panels are sub-$500 (Hooga HG300 ~$299 etc.); needs $500+ product refresh
+
 publishedDate: 2026-06-17
 featured: true
-# bestPick: REMOVED — Hooga HG300 is sub-$500
+
 image: "/images/og-your-mitochondria-are-starving-for-light--what-20-minutes-of.svg"
+products: 4
+bestPick: "Hooga HG300"
 faq:
   - q: "Do red light therapy panels really work?"
     a: "Yes. A 2023 systematic review in Photobiomodulation, Photomedicine, and Laser Surgery found that red light therapy significantly reduces inflammation and promotes tissue repair. The mechanism is well-established: mitochondria absorb red/near-infrared light, increasing ATP production."

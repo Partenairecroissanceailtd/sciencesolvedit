@@ -6,6 +6,7 @@ category: cold-plunge
 publishedDate: 2026-06-17
 featured: false
 image: "/images/og-what-science-actually-says-about-cold-water-immersion-benefi.svg"
+bestPick: "Ice Barrel 300"
 ---
 
 If you've spent any time in the biohacking space, you've heard the claims: cold plunging boosts recovery, burns fat, strengthens immunity, sharpens focus, and extends longevity. But how many of these claims hold up to scientific scrutiny?

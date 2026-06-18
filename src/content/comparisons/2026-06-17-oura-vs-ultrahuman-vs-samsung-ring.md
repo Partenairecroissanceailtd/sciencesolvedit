@@ -2,11 +2,22 @@
 title: "Oura Ring vs Ultrahuman vs Samsung — Which $349-$449 Smart Ring Gives You the Most Accurate HRV?"
 description: "The three biggest smart ring brands compared — Oura Ring 5, Ultrahuman Ring Air, and Samsung Galaxy Ring. Accuracy, features, subscriptions, and ecosystem. Note: All sub-$500; needs $500+ product refresh."
 category: wearables
-# products: REMOVED — all sub-$500 smart rings
+
 publishedDate: 2026-06-17
 featured: false
-# winner: REMOVED — Oura Ring 5 is sub-$500
+
 image: "/images/og-oura-ring-vs-ultrahuman-vs-samsung--which-349-449-smart-ring.svg"
+products:
+  - name: "Oura Ring 5"
+    score: 95
+    url: "https://www.amazon.com/dp/B0GRJVBPH3?tag=sciencesolved-20"
+  - name: "Amazfit Helio Ring"
+    score: 83
+    url: "https://www.amazon.com/dp/B0D5LPZHLB?tag=sciencesolved-20"
+  - name: "RingConn Gen 2 Air"
+    score: 78
+    url: "https://www.amazon.com/dp/B0DWK135K9?tag=sciencesolved-20"
+winner: "Oura Ring 5"
 ---
 
 The three smart ring brands that dominate the market — how do they compare?

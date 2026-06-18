@@ -2,11 +2,25 @@
 title: "Oura Ring 5 vs Ultrahuman vs Amazfit — Are Any of These $300-$450 Rings Worth It for Sleep Tracking?"
 description: "We compared the top smart rings head-to-head across sleep accuracy, HRV validation, battery life, subscription costs, and features. Note: All smart rings are sub-$500; needs $500+ product refresh."
 category: wearables
-# products: REMOVED — all sub-$500 smart rings
+
 publishedDate: 2026-06-17
 featured: true
-# winner: REMOVED — Oura Ring 5 is sub-$500
+
 image: "/images/og-oura-ring-5-vs-ultrahuman-vs-amazfit--are-any-of-these-300-4.svg"
+products:
+  - name: "Oura Ring 5"
+    score: 95
+    url: "https://www.amazon.com/dp/B0GRJVBPH3?tag=sciencesolved-20"
+  - name: "Samsung Galaxy Ring"
+    score: 80
+    url: "https://www.amazon.com/dp/B0D3F6V7XG?tag=sciencesolved-20"
+  - name: "Amazfit Helio Ring"
+    score: 85
+    url: "https://www.amazon.com/dp/B0D5LPZHLB?tag=sciencesolved-20"
+  - name: "RingConn Gen 2 Air"
+    score: 82
+    url: "https://www.amazon.com/dp/B0DWK135K9?tag=sciencesolved-20"
+winner: "Oura Ring 5"
 ---
 
 Smart rings have become the biohacker's preferred wearable for sleep and recovery tracking. Here's how the top models stack up.

@@ -2,10 +2,24 @@
 title: "Hooga HG300 vs Smart 650W — Do $300 Red Light Panels Deliver Clinical-Grade Irradiance?"
 description: "We compared the top 10 red light therapy panels head-to-head across wavelength options, irradiance, coverage area, and price. Note: Most panels are sub-$500; needs $500+ product refresh."
 category: red-light-therapy
-# products: REMOVED — all sub-$500; needs $500+ product refresh
+
 publishedDate: 2026-06-17
-# winner: REMOVED — Hooga Ultra 300 is sub-$500
+
 image: "/images/og-hooga-hg300-vs-smart-650w--do-300-red-light-panels-deliver-c.svg"
+products:
+  - name: "Hooga Ultra 300"
+    score: 96
+    url: "https://www.amazon.com/dp/B0CGBSCQH7?tag=sciencesolved-20"
+  - name: "Hooga HG300"
+    score: 95
+    url: "https://www.amazon.com/dp/B08Z761MHR?tag=sciencesolved-20"
+  - name: "Hooga Pro300"
+    score: 93
+    url: "https://www.amazon.com/dp/B07WF9HNST?tag=sciencesolved-20"
+  - name: "Smart 650W Panel"
+    score: 91
+    url: "https://www.amazon.com/dp/B0FM3YT23X?tag=sciencesolved-20"
+winner: "Hooga Ultra 300"
 ---
 
 ## 10 Best Red Light Therapy Panels Compared Head-to-Head

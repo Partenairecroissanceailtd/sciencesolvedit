@@ -2,11 +2,13 @@
 title: "The Health Data You're Not Getting from Your Wrist — What a $449 Ring Reveals About Sleep"
 description: "How smart rings track sleep stages, HRV, heart rate, and body temperature from your finger. Evidence-based analysis with validation study data for Oura, Ultrahuman, Amazfit, and RingConn."
 category: wearables
-# products: REMOVED — all smart rings sub-$500 (Oura Ring 5 ~$449); needs $500+ product refresh
+
 publishedDate: 2026-06-17
 featured: true
-# bestPick: REMOVED — Oura Ring 5 is sub-$500
+
 image: "/images/og-the-health-data-youre-not-getting-from-your-wrist--what-a-44.svg"
+products: 4
+bestPick: "Oura Ring 5"
 faq:
   - q: "Are smart rings accurate for sleep tracking?"
     a: "Yes — multiple validation studies show Oura Ring has >85% epoch-by-epoch agreement with polysomnography (PSG), the gold standard for sleep staging. A 2023 study in Sleep found Oura's sleep architecture detection rivals clinical-grade devices."

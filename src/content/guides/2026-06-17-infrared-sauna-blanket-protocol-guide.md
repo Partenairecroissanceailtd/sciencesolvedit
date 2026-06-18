@@ -6,6 +6,7 @@ category: sauna-blankets
 publishedDate: 2026-06-17
 featured: false
 image: "/images/og-how-to-use-an-infrared-sauna-blanket-science-based-protocol.svg"
+bestPick: "HigherDOSE Infrared Sauna Blanket"
 ---
 
 Getting the most out of your infrared sauna blanket requires more than just lying down and turning it on. Based on the research, here's the optimal protocol.

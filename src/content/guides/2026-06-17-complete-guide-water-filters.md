@@ -2,11 +2,13 @@
 title: "What's Actually in Your Tap Water? Brita, ZeroWater, and the Science of Home Filtration"
 description: "What contaminants different filters remove, NSF certifications explained, pitcher vs under-sink vs whole house, and the peer-reviewed evidence on water filtration effectiveness."
 category: health-monitoring
-# products: REMOVED — all water filters sub-$500 (Brita $15-35, ZeroWater $30-60); needs $500+ product refresh
+
 publishedDate: 2026-06-17
 featured: true
-# bestPick: REMOVED — sub-$500 product
+
 image: "/images/og-whats-actually-in-your-tap-water-brita-zerowater-and-the-sci.svg"
+products: 3
+bestPick: "APEC ROES-50"
 faq:
   - q: "What type of water filter removes the most contaminants?"
     a: "Reverse osmosis (RO) systems remove 90-99% of total dissolved solids, including lead, arsenic, fluoride, nitrates, and most PFAS. Pitcher filters are more limited — Brita Elite removes 99% of lead but not fluoride or arsenic."

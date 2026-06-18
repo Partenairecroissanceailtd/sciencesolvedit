@@ -2,10 +2,12 @@
 title: "15 Extra Hairs per Square Centimeter — Is Red Light Therapy the Hair Loss Treatment You Haven't Tried?"
 description: "A deep dive into the peer-reviewed research on photobiomodulation for androgenetic alopecia — what clinical trials show about hair regrowth, density improvements, and honest limitations."
 category: red-light-therapy
-# products: REMOVED — all sub-$500 hair growth devices; needs $500+ product refresh
+
 publishedDate: 2026-06-18
-# bestPick: REMOVED — DRTHEORY is sub-$500
+
 image: "/images/og-15-extra-hairs-per-square-centimeter--is-red-light-therapy-t.svg"
+products: 3
+bestPick: "Hooga HG300"
 faq:
   - q: "Does red light therapy actually regrow hair?"
     a: "Yes — multiple randomized controlled trials and meta-analyses show statistically significant increases in hair density with LLLT. A 2024 systematic review of RCTs found a mean increase of 15.22 hairs per cm² compared to sham devices."

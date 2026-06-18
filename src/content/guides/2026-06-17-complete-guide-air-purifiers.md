@@ -2,11 +2,13 @@
 title: "Your Home Air Might Be Dirtier Than You Think — Can a $150 Purifier Actually Fix It?"
 description: "HEPA filters, CADR ratings, and the science of indoor air quality. We review what peer-reviewed research shows about air purifiers for allergies, sleep, and cardiovascular health."
 category: health-monitoring
-# products: REMOVED — all products sub-$500; needs $500+ product refresh
+
 publishedDate: 2026-06-17
 featured: true
-# bestPick: REMOVED — sub-$500 product
+
 image: "/images/og-your-home-air-might-be-dirtier-than-you-think--can-a-150-pur.svg"
+products: 3
+bestPick: "Coway Airmega 400"
 faq:
   - q: "Do air purifiers really make a difference?"
     a: "Yes — a 2019 systematic review in the Journal of Allergy and Clinical Immunology found that HEPA air purifiers significantly reduced indoor PM2.5 levels and improved allergic rhinitis symptoms. Multiple studies also show cardiovascular benefits from reduced particulate exposure."

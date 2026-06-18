@@ -6,6 +6,7 @@ category: sauna-blankets
 publishedDate: 2026-06-17
 featured: false
 image: "/images/og-infrared-sauna-blanket-benefits-what-science-actually-says.svg"
+bestPick: "HigherDOSE Infrared Sauna Blanket"
 ---
 
 Infrared sauna blankets are one of the fastest-growing biohacking tools — but which benefits are backed by real science? We reviewed the PubMed literature and graded each claim.

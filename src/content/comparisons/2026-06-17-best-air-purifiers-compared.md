@@ -2,11 +2,22 @@
 title: "Your Air Purifier Might Be Too Small for the Room — Here's How to Know"
 description: "We compared the top air purifiers head-to-head across CADR rating, HEPA quality, filter costs, noise levels, and room coverage. Note: All products are sub-$500; needs $500+ product refresh."
 category: health-monitoring
-# products: REMOVED — all sub-$500 air purifiers
+
 publishedDate: 2026-06-17
 featured: true
-# winner: REMOVED — sub-$500 product
+
 image: "/images/og-your-air-purifier-might-be-too-small-for-the-room--heres-how.svg"
+products:
+  - name: "Coway Airmega 400"
+    score: 92
+    url: "https://www.amazon.com/dp/B01C9RIACG?tag=sciencesolved-20"
+  - name: "Blueair Blue Pure 411 Auto"
+    score: 85
+    url: "https://www.amazon.com/dp/B08L4RL6GB?tag=sciencesolved-20"
+  - name: "Alen BreatheSmart 75i"
+    score: 82
+    url: "https://www.amazon.com/dp/B07FQ8BFB5?tag=sciencesolved-20"
+winner: "Coway Airmega 400"
 ---
 
 ## Quick Comparison

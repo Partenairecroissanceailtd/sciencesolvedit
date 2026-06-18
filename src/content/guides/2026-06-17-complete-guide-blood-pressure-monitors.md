@@ -2,11 +2,13 @@
 title: "Your Home Blood Pressure Monitor Might Be Wrong — Here's What the Research Says"
 description: "Upper arm vs wrist, clinical validation, and why most people measure incorrectly. Evidence-based guide to home blood pressure monitoring with PubMed-cited research."
 category: health-monitoring
-# products: REMOVED — all products sub-$500; needs $500+ product refresh
+
 publishedDate: 2026-06-17
 featured: true
-# bestPick: REMOVED — sub-$500 product
+
 image: "/images/og-your-home-blood-pressure-monitor-might-be-wrong--heres-what.svg"
+products: 3
+bestPick: "Omron Complete"
 faq:
   - q: "Which is more accurate — wrist or upper arm blood pressure monitor?"
     a: "Upper arm monitors are more accurate. The American Heart Association recommends upper arm cuffs for home monitoring. Wrist monitors are convenient but more sensitive to body position errors."

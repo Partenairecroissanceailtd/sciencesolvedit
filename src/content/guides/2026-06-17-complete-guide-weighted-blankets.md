@@ -2,11 +2,13 @@
 title: "Your Brain on 15 Pounds of Pressure — Why a Weighted Blanket Tricks Your Nervous System into Calming Down"
 description: "How deep touch pressure stimulation works, what the RCTs actually show about sleep and anxiety improvement, and how to choose the right weight and material."
 category: sleep-wellness
-# products: REMOVED — all weighted blankets sub-$500 (Gravity ~$200); needs $500+ product refresh
+
 publishedDate: 2026-06-17
 featured: true
-# bestPick: REMOVED — sub-$500 product
+
 image: "/images/og-your-brain-on-15-pounds-of-pressure--why-a-weighted-blanket.svg"
+products: 3
+bestPick: "Gravity Blanket"
 faq:
   - q: "Do weighted blankets actually work?"
     a: "Yes — a 2020 RCT in the Journal of Clinical Sleep Medicine found that weighted blankets significantly improved sleep quality and reduced pre-sleep arousal in adults with insomnia. A 2024 meta-analysis of 8 RCTs confirmed moderate effects for anxiety reduction (Hedges' g=0.45)."

@@ -2,11 +2,22 @@
 title: "Brita vs ZeroWater vs PUR — Which Filter Actually Removes the Most Lead and PFAS?"
 description: "We compared the top water filters head-to-head on contaminant removal, NSF certifications, filter lifespan, ongoing costs, and water quality. Note: All products are sub-$500; needs $500+ product refresh."
 category: health-monitoring
-# products: REMOVED — all sub-$500 water filters
+
 publishedDate: 2026-06-17
 featured: true
-# winner: REMOVED — sub-$500 product
+
 image: "/images/og-brita-vs-zerowater-vs-pur--which-filter-actually-removes-the.svg"
+products:
+  - name: "APEC ROES-50 RO System"
+    score: 92
+    url: "https://www.amazon.com/dp/B005C78S9Q?tag=sciencesolved-20"
+  - name: "Aquasana OptimH2O"
+    score: 88
+    url: "https://www.amazon.com/dp/B07SMGQHCP?tag=sciencesolved-20"
+  - name: "Waterdrop G3 RO System"
+    score: 80
+    url: "https://www.amazon.com/dp/B0B5Y8RKL5?tag=sciencesolved-20"
+winner: "APEC ROES-50 RO System"
 ---
 
 ## Quick Comparison
